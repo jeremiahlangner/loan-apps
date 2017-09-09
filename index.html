@@ -24,7 +24,7 @@
 				<div class="row">
 					<div class="col-lg-3">
 						<div class="sub-container">
-						<!-- Insert Proximity Search Code and Styles here. -->
+							<p id="zipcode-info"></p>
 						</div>
 					</div>
 
@@ -310,8 +310,9 @@ WebFont.load({
 	}
 });
 </script>
+
 <script>
-// Example starter JavaScript for disabling form submissions if there are invalid fields
+// Disable form submissions if there are invalid fields
 (function() {
   "use strict";
   window.addEventListener("load", function() {
@@ -326,7 +327,9 @@ WebFont.load({
   }, false);
 }());
 </script>
+
 <script type="text/javascript">
+// Zip code query 
 (function() {
 	// IMPORTANT: Fill in your client key
 	var clientKey = "js-0RdwQ3vrCaId1vH7GQzG7V0m5sqJdFLexZLn2gOFrxTt2AAIr9oz5oWaRnT52Fkz";
@@ -348,6 +351,7 @@ WebFont.load({
 		// }
 		else {
 			console.log(data);
+			$('#zipcode-info').html(JSON.stringify(data));
 		}
 	}
 	
@@ -368,7 +372,7 @@ WebFont.load({
 		console.log('made it this far.');
 		// Build url
 		// https://zipcodedistanceapi.redline13.com/rest/<api_key>/radius.csv/08057/5/miles?minimal
-		var url = "https://www.zipcodeapi.com/rest/"+clientKey+"/radius.json/" + zipcode + "/30/miles";
+		var url = "https://www.zipcodeapi.com/rest/"+clientKey+"/radius.json/" + zipcode + "/15/miles";
 		
 		// Make AJAX request
 		$.ajax({
