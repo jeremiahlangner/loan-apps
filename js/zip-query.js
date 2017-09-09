@@ -17,7 +17,7 @@ function handleResp(data) {
 		var htmlString = '';
 		
 		// Build html for list.
-		zipList.forEach(zipcode, function() {
+		zipList.forEach(function(zipcode) {
 			htmlString = htmlString + '<ul><li>' + zipcode.city +'</li><li>Zipcode: ' + zipcode.zip_code + '</li><li>Distance: ~' + zipcode.distance + '</li></ul>';
 		});
 		// Add list to page.
