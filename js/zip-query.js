@@ -11,8 +11,13 @@ function handleResp(data) {
 	// 	.find("span.distance").text(data.distance + " miles");
 	// }
 	else {
-		console.log(data);
-		$('#zipcode-info').html(JSON.stringify(data));
+		console.log(data.zip_codes);
+
+		var zipList = data.zip_codes;	
+		zipList.foreach(zipcode, function() {
+
+		})
+		$('#zipcode-info').html(zipList);
 	}
 }
 
