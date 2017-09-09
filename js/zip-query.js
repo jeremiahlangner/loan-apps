@@ -38,9 +38,9 @@ function handleResp(data) {
 					'</li><li>Zipcode: ' + zipcode.zip_code + 
 					'</li><li>Distance: ';
 				if (zipcode.distance == 0) {
-					htmlString = htmlString + zipcode.distance.toFixed(1) + 'mi.</li></ul>';
+					htmlString = htmlString + '<' zipList[1].distance.toFixed() + ' mi.</li></ul>';
 				} else {
-					htmlString = htmlString + '~' + zipcode.distance.toFixed(1) + 'mi.</li></ul>';
+					htmlString = htmlString + '~' + zipcode.distance.toFixed(1) + ' mi.</li></ul>';
 				}	
 			}
 		});
