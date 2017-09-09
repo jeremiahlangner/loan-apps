@@ -11,13 +11,17 @@ function handleResp(data) {
 	// 	.find("span.distance").text(data.distance + " miles");
 	// }
 	else {
-		console.log(data.zip_codes);
+		var zipList = data.zip_codes;
+		console.log(zipList);
 
-		var zipList = data.zip_codes;	
-		zipList.foreach(zipcode, function() {
-
-		})
-		$('#zipcode-info').html(zipList);
+		var htmlString = '';
+		
+		// Build html for list.
+		zipList.forEach(zipcode, function() {
+			htmlString = htmlString + '<ul><li>' + zipcode.city +'</li><li>Zipcode: ' + zipcode.zip_code + '</li><li>Distance: ~' + zipcode.distance + '</li></ul>';
+		});
+		// Add list to page.
+		$('#zipcode-info').html(htmlString);
 	}
 }
 
