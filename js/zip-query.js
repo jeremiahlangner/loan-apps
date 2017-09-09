@@ -30,7 +30,7 @@ function handleResp(data) {
 		var htmlString = '';
 		
 		// Build html for list.
-		zipList.forEach(function(zipcode) {
+		zipList.slice(0, 6).forEach(function(zipcode) {
 			if(zipcode.state = queryZip.state) {
 				htmlString = htmlString + 
 					'<ul style="list-style-type:none; padding-left: 0;"><li>' + 
