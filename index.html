@@ -24,8 +24,13 @@
 				<div class="row">
 					<div class="col-lg-3">
 						<div class="sub-container" style="overflow-x: hidden;">
-							<h3>Zip Codes with 15 miles of 29615</h3>
+							<h5>Zip Codes within 15 miles of 29615</h5>
 							<p id="zipcode-info"></p>
+							<h6>Search a different area?</h6>
+							<form class="form-group">
+								<input type="text" id="zip-search" class="form-control" name="zip-search" placeholder="Enter a New Zip" >
+								<button class="btn btn-outline-primary btn-round" onclick="searchForZip()" style="width: 100%; margin-top: 16px;">Search</button>
+							</form>
 						</div>
 					</div>
 
@@ -302,106 +307,18 @@
 			-->
 			
 
-<!-- Google fonts. -->
-<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
-<script>
-WebFont.load({
-	google: {
-		families: ['Montserrat:400,500']
-	}
-});
-</script>
+			<!-- Google fonts. 
+			<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+			<script>
+			WebFont.load({
+				google: {
+					families: ['Montserrat:400,500']
+				}
+			});
+			</script> -->
 
-<script>
-// Disable form submissions if there are invalid fields
-(function() {
-  "use strict";
-  window.addEventListener("load", function() {
-    var form = document.getElementById("needs-validation");
-    form.addEventListener("submit", function(event) {
-      if (form.checkValidity() == false) {
-        event.preventDefault();
-        event.stopPropagation();
-      }
-      form.classList.add("was-validated");
-    }, false);
-  }, false);
-}());
-</script>
-
-<script type="text/javascript">
-// Zip code query 
-(function() {
-	// IMPORTANT: Fill in your client key
-	var clientKey = "js-0RdwQ3vrCaId1vH7GQzG7V0m5sqJdFLexZLn2gOFrxTt2AAIr9oz5oWaRnT52Fkz";
-	
-	var cache = {};
-	
-	/** Handle successful response */
-	function handleResp(data)
-	{
-		// Check for error
-		if (data.error_msg)
-			console.log(data.error_msg);
-		// else if ("distance" in data)
-		// {
-		// 	// Show div
-		// 	container.find("div.distance").show()
-		// 	// Set distance
-		// 	.find("span.distance").text(data.distance + " miles");
-		// }
-		else {
-			console.log(data);
-			$('#zipcode-info').html(JSON.stringify(data));
-		}
-	}
-	
-	// Get zip code
-	var zipcode = "29615";//$("input[name='zipcode']").val().substring(0, 5);
-	if (zipcode.length == 5 && /^[0-9]+$/.test(zipcode))
-	{
-		// Clear error
-		// errorDiv.empty();
-		// Check cache
-		var cacheKey = zipcode;
-		if (cacheKey in cache)
-		{
-			handleResp(cache[cacheKey]);
-		}
-	else
-	{
-		console.log('made it this far.');
-		// Build url
-		// https://zipcodedistanceapi.redline13.com/rest/<api_key>/radius.csv/08057/5/miles?minimal
-		var url = "https://www.zipcodeapi.com/rest/"+clientKey+"/radius.json/" + zipcode + "/15/miles";
-		
-		// Make AJAX request
-		$.ajax({
-			"url": url,
-			"dataType": "json"
-		}).done(function(data) {
-			handleResp(data);
 			
-			// Store in cache
-			cache[cacheKey] = data;
-
-		}).fail(function(data) {
-			if (data.responseText && (json = $.parseJSON(data.responseText)))
-			{
-				// Store in cache
-				cache[cacheKey] = json;
-				
-				// Check for error
-				if (json.error_msg)
-					console.log(json.error_msg);
-			}
-			else
-				console.log('Request failed.');
-		});
-	}
-}
-})();
-</script>
-
+			<script src="./js/validate-form.js"></script>
+			<script src="./js/zip-query.js"></script>
 	</body>
 </html>
