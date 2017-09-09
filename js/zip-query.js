@@ -1,6 +1,5 @@
 
-function handleResp(data)
-{
+function handleResp(data) {
 	// Check for error
 	if (data.error_msg)
 		console.log(data.error_msg);
@@ -21,7 +20,7 @@ function searchForZip () {
 	var clientKey = "js-0RdwQ3vrCaId1vH7GQzG7V0m5sqJdFLexZLn2gOFrxTt2AAIr9oz5oWaRnT52Fkz";
 	
 	var cache = {};
-	var zipcode = $('#zip-search').val(); //$("input[name='zipcode']").val().substring(0, 5);
+	var zipcode = $('#zip-search').val().substring(0, 5); //$("input[name='zipcode']").val().substring(0, 5);
 	if (zipcode.length == 5 && /^[0-9]+$/.test(zipcode)) {
 		// Clear error
 		// errorDiv.empty();
