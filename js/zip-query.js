@@ -32,7 +32,16 @@ function handleResp(data) {
 		// Build html for list.
 		zipList.forEach(function(zipcode) {
 			if(zipcode.state = queryZip.state) {
-				htmlString = htmlString + '• <ul style="list-style-type:none;"><li>' + zipcode.city +', ' + zipcode.state + '</li><li>Zipcode: ' + zipcode.zip_code + '</li><li>Distance: ~' + zipcode.distance.toFixed(1) + '</li></ul>';
+				htmlString = htmlString + 
+					'<ul style="list-style-type:none;"><li>' + 
+					zipcode.city + ', ' + zipcode.state + 
+					'</li><li>Zipcode: ' + zipcode.zip_code + 
+					'</li><li>Distance: ';
+				if (zipcode.distance == 0) {
+					htmlString = htmlString + zipcode.distance.toFixed(1) + 'mi.</li></ul>';
+				} else {
+					htmlString = htmlString + '~' + zipcode.distance.toFixed(1) + 'mi.</li></ul>';
+				}	
 			}
 		});
 		// Add list to page.
