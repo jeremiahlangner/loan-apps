@@ -19,7 +19,6 @@ function handleResp(data) {
 		zipList.forEach(function(zipcode) {
 			if(zipcode.distance == 0) {
 				queryZip = zipcode;
-				break;
 			}
 		});
 
