@@ -16,12 +16,12 @@ function handleResp(data) {
 
 		// cache queried zipcode
 		var queryZip = {};
-		zipList.forEach(function(zipcode)) {
+		zipList.forEach(function(zipcode) {
 			if(zipcode.distance == 0) {
 				queryZip = zipcode;
 				break;
 			}
-		}
+		});
 
 		// sort the zipcode list from closest to furthest
 		zipList.sort(function(a, b) {
