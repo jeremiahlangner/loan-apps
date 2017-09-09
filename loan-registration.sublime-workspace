@@ -1,0 +1,650 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"width",
+				"width"
+			],
+			[
+				"php",
+				"php"
+			],
+			[
+				"Comics",
+				"Comics"
+			],
+			[
+				"y",
+				"y\tForceOverLifetimeModule.*"
+			],
+			[
+				"game",
+				"gameObject\tIClippable.*"
+			],
+			[
+				"construction",
+				"construction-lines-1-svg"
+			],
+			[
+				"get",
+				"getMilliseconds"
+			],
+			[
+				"re",
+				"removeClass"
+			],
+			[
+				"col-lg",
+				"col-lg-6"
+			],
+			[
+				"fle",
+				"flex-basis"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 11001,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "App API Key",
+			"settings":
+			{
+				"buffer_size": 499,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 354.0,
+		"last_filter": "pack",
+		"selected_items":
+		[
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"material theme",
+				"Material Theme: Activate theme"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/jeremiahlangner/Desktop/clients/whg/loan-apps"
+	],
+	"file_history":
+	[
+		"/Users/jeremiahlangner/Desktop/clients/whg/loan-apps/App API Key",
+		"/Users/jeremiahlangner/Desktop/clients/shopify/revised-footer.liquid",
+		"/Users/jeremiahlangner/Desktop/clients/shopify/instagram-feed.liquid",
+		"/Users/jeremiahlangner/Desktop/clients/benschipper/comics-pager-plugin.html",
+		"/Users/jeremiahlangner/Desktop/clients/whg/loan-apps/css/main.css",
+		"/Users/jeremiahlangner/Desktop/clients/whg/loan-apps/js/main.js",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/admin/new-event.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/admin/manage-comics.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/admin/edit-post.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/schedule.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/js/admin/input-handler.js",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/js/admin/filehandler/filehandler.js",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/_layouts/admin.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/about.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/blog.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/_includes/main.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/_layouts/default.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/css/style.scss",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/_includes/head.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/_includes/header.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/index.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/css/animate.scss",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/css/style.css",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/css/theme.min.css",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/contact.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/gallery.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/comics.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/_includes/footer.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/Gemfile",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/.gitignore",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/_config.yml",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/admin/manage-artworks.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/css/theme-backup.min.css",
+		"/Users/jeremiahlangner/Desktop/whg/miracle-breakthrough/index.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/_comics/da-williams.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/_gallery/artwork1.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/js/vibran.min.js",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/js/colorify.js",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/js/color-thief.min.js",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/js/color-thief.js",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/css/colorify.css",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/js/average-color.js",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/admin/edit-page.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/_conventions/event-1.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/admin/manage-pages.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/admin/index.html",
+		"/Users/jeremiahlangner/Library/Application Support/Sublime Text 3/Packages/User/Unity3DReference.sublime-settings",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/js/admin/populate-post-editors.js",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/admin/manage-events.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/admin/new-post.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/_comics/kitten-barbarian.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/_comics/kitten-barbarian4.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/_comics/kitten-barbarian3.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/_comics/kitten-barbarian2.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/admin/new-artwork.html",
+		"/Users/jeremiahlangner/Desktop/pfs/pfs-app/api/controllers/AdminController.js",
+		"/Users/jeremiahlangner/Desktop/pfs/pfs-app/views/public/collections/collections.ejs",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/admin/new-page.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/js/admin/submit.js",
+		"/Users/jeremiahlangner/Desktop/pfs/database/person.json",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/css/animate.css",
+		"/Users/jeremiahlangner/Desktop/whg/loan-boost/index.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/search.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/admin/edit-artwork.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/admin/edit-event.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/_shell/edit.command",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/_shell/install.command",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/admin/manage-posts.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/js/admin/make-droppable.js",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/js/admin/octokat.js",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/hello.js",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/js/admin/hello.js",
+		"/Users/jeremiahlangner/Desktop/joe-death-feature.html",
+		"/Users/jeremiahlangner/Desktop/benschipper-plugin-start.js",
+		"/Users/jeremiahlangner/Desktop/tooledstyles/tooledstyles.php",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/categories.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/js/categories.js",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/_layouts/category.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/js/admin/edit-post.js",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/js/admin/edit-page.js",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/js/admin/drag-and-drop.js",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/_layouts/comic.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/_layouts/artwork.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/admin/new-convention.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/js/jquery.min.js",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/plugins/textillate-master/jquery.textillate.js",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/js/admin/globals.js",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/js/admin/Populate-post-editors.js",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/js/edit-post.js",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/plugins/textillate-master/assets/animate.css",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/_artworks/artwork1.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/_artworks/Batman.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/js/search.js",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/js/lunr.min.js",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/admin/manage-artwork.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/_posts/2017-05-03-pretty-weird-art-has-been.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/_conventions/convention-2.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/admin/manage-artworkds.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/_comics/kitten-barbarian5.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/_includes/comic-admin.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/admin/comic.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/admin/manage-comic.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/plugins/dropzone/dropzone.js",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/css/hover.min.css",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/_includes/admin-header.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/_admin/manage-comic.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/_admin/add-page.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/_admin/new-post.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/plugins/trumbo/dist/trumbowyg.js",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/_backend/new-post.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/_backend/new-comic.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/_comics/batman.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/_comics/kitten-barbarian-2.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/_site/about.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/_comics/da-williams3.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/_comics/da-williams4.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/_comics/da-williams2.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/_posts/2017-05-19-new-post.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/_conventions/convention-1.html",
+		"/Users/jeremiahlangner/Desktop/Fortis Riders/Rebrand/Presentation/html/index.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/_posts/2017-05-15-welcome-to-jekyll.markdown",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/Backend/Newpost.html",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/_shell/upload.command",
+		"/Users/jeremiahlangner/Desktop/prettyweirdart/prettyweirdart.github.io/_shell/install.sh",
+		"/Users/jeremiahlangner/Desktop/uptowncatering/uptowncatering.github.io/_layouts/default.html",
+		"/Users/jeremiahlangner/Desktop/uptowncatering/uptowncatering.github.io/css/animate.css",
+		"/Users/jeremiahlangner/Desktop/resume/resume-master/css/font.css",
+		"/Users/jeremiahlangner/Desktop/uptowncatering/uptowncatering.github.io/js/yt-bg.js"
+	],
+	"find":
+	{
+		"height": 70.0
+	},
+	"find_in_files":
+	{
+		"height": 158.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"radio",
+			"3>",
+			"container",
+			"post",
+			"container",
+			"navbar-default",
+			"border-top",
+			"white",
+			"featured-image",
+			"post",
+			"feature",
+			"footer",
+			"max-width",
+			"style",
+			"style ",
+			"post",
+			"featured-image",
+			"more",
+			"metadata",
+			"more",
+			"featured-image",
+			"post",
+			".nav",
+			"nav",
+			"ul.nav",
+			"main-img",
+			".post",
+			"container",
+			"white",
+			"featured-image",
+			"p",
+			".post",
+			"white",
+			"featured-image",
+			"main-img",
+			"metadata",
+			"hr",
+			"featured-image-overlay",
+			"main-img",
+			"h1,h2,h3",
+			"navbar",
+			"feature-description",
+			"post",
+			"h3 a",
+			"main-page",
+			"featured-image",
+			"main-img",
+			"a:hover",
+			"a:hvoer",
+			"a",
+			"main-img",
+			"main-page",
+			"navbar-default",
+			"h3 a",
+			".logo",
+			"metadata",
+			"metadata strong",
+			"metadata",
+			"navbar",
+			"main-page",
+			"body {",
+			"padding-top",
+			"navbar",
+			"h1,h2,h3",
+			"label",
+			".nav>li a",
+			"li a",
+			"nav li",
+			"white",
+			"cat-list",
+			"categories",
+			"logo",
+			"grid-item",
+			"footer",
+			"latest-page",
+			"featured-image",
+			"comic-book",
+			"post",
+			"featured-image",
+			"post",
+			"box-shadow",
+			"white",
+			"feature-title",
+			"post-title-container",
+			"post a",
+			"post",
+			".post strong",
+			".post",
+			"featured-image",
+			"more",
+			"post",
+			"metadata",
+			"post a",
+			"metadata",
+			"comic-book-title",
+			":hover",
+			"main-page",
+			"main-img",
+			"h3",
+			"featured-image-overlay",
+			"feature-title-container",
+			"metadata",
+			"strong",
+			"main-page",
+			"title-container",
+			"h3",
+			"featured-image",
+			"nav",
+			"featured-image",
+			"main-img-overlay",
+			"hue-rotate",
+			"featured-image-overlay",
+			"featured-image",
+			"hue-rotate",
+			"huerotate",
+			"featured-image-overlay",
+			"main-img",
+			"latest-page",
+			"featured-image-overlay",
+			"nav",
+			"main-img",
+			"featured-image-overlay",
+			"main-page",
+			"main-pag",
+			"featured-image-overlay",
+			"color-thief",
+			"colorthief",
+			"color-thief"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11001,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								11001
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3211.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "App API Key",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 499,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								492,
+								492
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 62.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/Unity3D Build System/Unity.sublime-build",
+	"project": "loan-registration.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"about",
+				"about.html"
+			],
+			[
+				"header",
+				"_includes/header.html"
+			],
+			[
+				"sty",
+				"css/style.css"
+			],
+			[
+				"style",
+				"css/style.css"
+			],
+			[
+				"",
+				"css/style.css"
+			],
+			[
+				"ind",
+				"index.html"
+			],
+			[
+				"main",
+				"_includes/main.html"
+			],
+			[
+				"blog",
+				"blog.html"
+			],
+			[
+				"foo",
+				"_includes/footer.html"
+			],
+			[
+				"comi",
+				"comics.html"
+			],
+			[
+				"de",
+				"_layouts/default.html"
+			],
+			[
+				"st",
+				"css/style.css"
+			],
+			[
+				"s",
+				"css/style.css"
+			],
+			[
+				"man",
+				"admin/manage-comics.html"
+			],
+			[
+				"manage",
+				"admin/manage-pages.html"
+			],
+			[
+				"admin",
+				"_layouts/admin.html"
+			],
+			[
+				"inde",
+				"admin/index.html"
+			],
+			[
+				"styl",
+				"css/style.css"
+			],
+			[
+				"layout",
+				"views/common/layout.ejs"
+			],
+			[
+				"forms",
+				"assets/styles/forms.less"
+			],
+			[
+				"routes",
+				"config/routes.js"
+			],
+			[
+				"login",
+				"views/auth/login.ejs"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Desktop/jeremiahlangner/jeremiahlangner.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 113.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
