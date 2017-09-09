@@ -14,11 +14,27 @@ function handleResp(data) {
 		var zipList = data.zip_codes;
 		console.log(zipList);
 
+		// cache queried zipcode
+		var queryZip = {};
+		zipList.forEach(function(zipcode)) {
+			if(zipcode.distance == 0) {
+				queryZip = zipcode;
+				break;
+			}
+		}
+
+		// sort the zipcode list from closest to furthest
+		zipList.sort(function(a, b) {
+		    return parseFloat(a.distance) - parseFloat(b.distance);
+		});
+
 		var htmlString = '';
 		
 		// Build html for list.
 		zipList.forEach(function(zipcode) {
-			htmlString = htmlString + '<ul><li>' + zipcode.city +'</li><li>Zipcode: ' + zipcode.zip_code + '</li><li>Distance: ~' + zipcode.distance + '</li></ul>';
+			if(zipcode.state = queryZip.state) {
+				htmlString = htmlString + '<ul><li>' + zipcode.city +', ' + zipcode.state + '</li><li>Zipcode: ' + zipcode.zip_code + '</li><li>Distance: ~' + zipcode.distance + '</li></ul>';
+			}
 		});
 		// Add list to page.
 		$('#zipcode-info').html(htmlString);
