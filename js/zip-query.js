@@ -33,7 +33,7 @@ function handleResp(data) {
 		zipList.forEach(function(zipcode) {
 			if(zipcode.state = queryZip.state) {
 				htmlString = htmlString + 
-					'<ul style="list-style-type:none;"><li>' + 
+					'<ul style="list-style-type:none; padding-left: 0;"><li>' + 
 					zipcode.city + ', ' + zipcode.state + 
 					'</li><li>Zipcode: ' + zipcode.zip_code + 
 					'</li><li>Distance: ';
