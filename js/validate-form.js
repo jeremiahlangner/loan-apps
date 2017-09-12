@@ -7,6 +7,8 @@
       if (form.checkValidity() == false) {
         event.preventDefault();
         event.stopPropagation();
+      } else {
+        handleInput();
       }
       form.classList.add("was-validated");
     }, false);

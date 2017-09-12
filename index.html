@@ -30,6 +30,7 @@
 							<h6>Search a different area?</h6>
 							<form class="form-group">
 								<input type="text" id="zip-search" class="form-control" name="zip-search" placeholder="Enter a New Zip" >
+								<input type="hidden" >
 								<button type="button" class="btn btn-outline-primary btn-round" onclick="searchForZip()" style="width: 100%; margin-top: 16px;">Search</button>
 							</form>
 						</div>
@@ -281,7 +282,7 @@
 								</div>
 							</div>
 							<p style="margin-top: 16px;"> <strong>Note:</strong> <em>This is preliminary information and not the actual credit application. Our branch employee will contact you within 24 hours (during business hours) to complete the application process. Subject to our usual credit requirement. Borrowers must provide adequate property as collateral.</em></p>
-								<button class="btn btn-outline-primary btn-round" type="submit" style="width:100%">Submit</button>
+								<button class="btn btn-outline-primary btn-round" type="button" onclick="handleInput()" style="width:100%">Submit</button>
 						</form>
 						</div>
 					</div>
@@ -318,7 +319,7 @@
 			});
 			</script> -->
 
-			
+			<script src="./js/handle-input.js"></script>
 			<script src="./js/validate-form.js"></script>
 			<script src="./js/zip-query.js"></script>
 	</body>

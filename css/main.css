@@ -1,5 +1,8 @@
 /* main.scss */
 /* variables */
+input, textarea, button, label, option, select, .button, .hndle {
+  transition: all 0.25s cubic-bezier(0.64, 0.2, 0.02, 0.35); }
+
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -20,17 +23,23 @@ input {
   font-size: 12px !important;
   font-weight: 500 !important;
   width: 95% !important; }
+  input:hover {
+    border-color: #999; }
 
 select {
   padding-top: 6px !important;
   padding-bottom: 6px !important;
   font-size: 12px !important;
   font-weight: 500 !important; }
+  select:hover {
+    border-color: #999; }
 
 textarea {
   width: 95% !important;
   font-size: 12px !important;
   font-weight: 500 !important; }
+  textarea:hover {
+    border-color: #999; }
 
 .btn {
   border-radius: 2px !important; }

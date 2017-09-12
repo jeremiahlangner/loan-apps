@@ -4,6 +4,10 @@
 /* variables */
 $primary: #428bca;
 
+input, textarea, button, label, option, select, .button, .hndle {
+	transition: all .25s cubic-bezier(0.64,0.20,0.02,0.35);
+}
+
 body {
 	-webkit-font-smoothing: antialiased;
    	-moz-osx-font-smoothing: grayscale;
@@ -29,6 +33,16 @@ input {
 	font-size: 12px !important;
 	font-weight: 500 !important;
 	width: 95% !important;
+	&:hover {
+		border-color: #999;
+	}
+	&:hover::placeholder {
+	}
+	&:focus {
+	}
+	&:focus::placeholder {
+
+	}
 }
 
 select {
@@ -36,12 +50,18 @@ select {
 	padding-bottom: 6px !important;
 	font-size: 12px !important;
 	font-weight: 500 !important;
+	&:hover {
+		border-color: #999;
+	}
 }
 
 textarea {
 	width: 95% !important;
 	font-size: 12px !important;
 	font-weight: 500 !important;
+	&:hover {
+		border-color: #999;
+	}
 }
 
 .btn {
