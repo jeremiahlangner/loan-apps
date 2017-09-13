@@ -7,11 +7,11 @@
       if (form.checkValidity() == false) {
         event.preventDefault();
         event.stopPropagation();
-      } else {
-        event.preventDefault();
-        handleInput();
       }
       form.classList.add("was-validated");
+      if (form.checkValidity() == true) {
+        handleInput();
+      }
     }, false);
   }, false);
 }());
