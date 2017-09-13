@@ -8,6 +8,7 @@
         event.preventDefault();
         event.stopPropagation();
       } else {
+        event.preventDefault();
         handleInput();
       }
       form.classList.add("was-validated");

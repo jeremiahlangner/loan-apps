@@ -28,7 +28,7 @@
 							<p><em>Showing only the closest 6 results.</em></p>
 							<p id="zipcode-info"></p>
 							<h6>Search a different area?</h6>
-							<form class="form-group">
+							<form class="form-group" action="#">
 								<input type="text" id="zip-search" class="form-control" name="zip-search" placeholder="Enter a New Zip" >
 								<input type="hidden" >
 								<button type="button" class="btn btn-outline-primary btn-round" onclick="searchForZip()" style="width: 100%; margin-top: 16px;">Search</button>
@@ -41,7 +41,7 @@
 							<p><strong>Please complete the following information to begin the application process. If you prefer to inquire another way, you may call or visit the branch you selected to complete an application.</strong></p>
 
 						<label for="required"><div class="required">*</div> Required Fields</label>
-						<form class="form-group" id="needs-validation" novalidate>
+						<form class="form-group" id="needs-validation" action="#" novalidate>
 							<div class="row">
 								<div class="col-lg-3">
 									<label for="first-name">First Name:</label>
@@ -282,7 +282,7 @@
 								</div>
 							</div>
 							<p style="margin-top: 16px;"> <strong>Note:</strong> <em>This is preliminary information and not the actual credit application. Our branch employee will contact you within 24 hours (during business hours) to complete the application process. Subject to our usual credit requirement. Borrowers must provide adequate property as collateral.</em></p>
-								<button class="btn btn-outline-primary btn-round" type="button" onclick="handleInput()" style="width:100%">Submit</button>
+								<button class="btn btn-outline-primary btn-round" type="submit" style="width:100%">Submit</button>
 						</form>
 						</div>
 					</div>
