@@ -228,6 +228,7 @@
 									<div class="center"><button class="btn btn-outline-secondary btn-round btn-sm" type="button" style="" onclick="retreatStep()">Go Back</button></div>
 									<hr>
 									<div class="form-group">
+										<label for="required" class="required float-right" style="padding-right: 5%;">* Required Fields</label>
 										<div class="row" style="margin-top:24px;">
 											<div class="col-lg-3">
 												<label for="loan-amount">Loan Amount:</label>
@@ -242,6 +243,10 @@
 													<option value="$50,000 - $50,000">$50,000 - $50,000</option>
 													<option value="$50,000+">$50,000+</option>
 												</select>
+												<div class="required">*</div>
+												<div class="invalid-feedback">
+											        Please select an amount.
+											    </div>
 											</div>
 										</div>
 										<div class="row" style="margin-top:6px;">
