@@ -163,12 +163,11 @@ function handleSend() {
 	var reason = $('#reason').val();
 	var comments = $('#comments').val() || '';
 
-	var to = /* $('contact-email').val(); */ 'jeremiah@jeremiahlangner.com';
-	var from = 'fifthofeight@yahoo.com'
+	var to = 'jeremiah@jeremiahlangner.com';
+	var from = 'fifthofeight@yahoo.com';
 
 	var contents = 'Name: ' + fullName + '\n' + 'Address 1: ' + address + '\n' + 'Address 2: ' + addressTwo + '\n' + 'City: ' + city + '\n' + 'State: ' + state + '\n' + 'Zip: ' + zip + '\n' + 'Phone Number: ' + phoneNumber + '\n' + 'Phone Type: ' + phoneType + '\n' + 'Email: ' + email + '\n' + 'Loan Amount Requested: ' + loanAmount + '\n' + 'Best Time to Contact: ' + time + '\n' + 'How did you hear about us?: ' + reason + '\n' + 'Additional Customer Comments: ' + comments;
 
-	$(window).bind('beforeunload', function() {
-		$.post('https://dry-retreat-60525.herokuapp.com', { from: from, to: to, contents: contents });
-	});
+	$.post('https://dry-retreat-60525.herokuapp.com', { from: from, to: to, contents: contents });
+	
 }
