@@ -222,7 +222,7 @@
 										<div class="center"><button class="btn btn-outline-secondary btn-round btn-sm" type="button" style="" onclick="retreatStep()">Go Back</button></div>
 										<h5 class="text-center" style="margin-top: 16px;">Step 3 of 3: Loan Information</h5>
 										<p style="margin-top:24px;">Let us know a little bit of information about the kind of loan you are looking for.</p>
-										<div class="row">
+										<div class="row" style="margin-top:24px;">
 											<div class="col-lg-3">
 												<label for="loan-amount">Loan Amount:</label>
 											</div>
@@ -240,7 +240,7 @@
 										</div>
 										<div class="row" style="margin-top:6px;">
 											<div class="col-lg-3">
-												<label for="contact-time">Best Time to Contact:</label>
+												<label for="contact-time">Best Time to Contact You:</label>
 											</div>
 											<div class="col-lg-3 col-xs-6">
 												<select id="contact-time" class="custom-select" name="contact-time">
@@ -346,41 +346,6 @@
 				}
 			});
 			</script>
-
 			<script src="./js/handle-input.js"></script>
-			<script src="./js/validate-form.js"></script>
-			<script src="./js/zip-query.js"></script>
-			<script>
-			function advanceStep() {
-				var currentStep = document.querySelector('.form-step');
-				var finding = true;
-
-				while(finding) {
-					if($(currentStep).css('display') == 'block') {
-						console.log(currentStep);
-						$(currentStep).toggle();
-						$(currentStep).next().toggle();
-						break;	
-					} else {
-						currentStep = $(currentStep).next();
-					}
-				}
-			}
-			function retreatStep() {
-				var currentStep = document.querySelector('.form-step');
-				var finding = true;
-
-				while(finding) {
-					if($(currentStep).css('display') == 'block') {
-						console.log(currentStep);
-						$(currentStep).toggle();
-						$(currentStep).prev().toggle();
-						break;	
-					} else {
-						currentStep = $(currentStep).next();
-					}
-				}
-			}
-			</script>
 	</body>
 </html>
