@@ -1,4 +1,10 @@
 /* Form validation */
+function validateOnFocus() {
+
+}
+
+
+/* Form validation */
 function sendForm() {
 	console.log('got this far');
 	var form = document.getElementById("needs-validation");
