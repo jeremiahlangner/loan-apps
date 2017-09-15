@@ -29,14 +29,15 @@
 							<div class="card-header">
 							</div>
 							<div class="card-body">
+								<form id="needs-validation" action="#" novalidate>
 								<div class="form-step animated fadeIn">
 									<div class="outline">
 										<h5 class="text-center" style="margin-top: 16px">Find a Location</h5>
 										<p class="text-center" style="padding-left: 8px; padding-right: 8px;"><em>To get started with your loan application, enter your zip code to find our location nearest to you.</em></p>
-										<form class="form-group" action="#" style="margin-top: 16px;">
+										<div class="form-group" style="margin-top: 16px;">
 											<input type="text" id="zip-search" class="form-control" name="zip-search" placeholder="Enter a Zip Code" style="margin-left: 2.5%;">
 											<button type="button" class="btn btn-outline-primary btn-round" onclick="searchForZip()" style="width: 95%; margin-left: 2.5%;">Search</button>
-										</form>
+										</div>
 									</div>
 									<div class="hidden-on-start location-header animated fadeIn">
 										<h5 class="text-center" style="margin-top: 24px;">Step 1 of 3: Select a Location</h5>
@@ -55,176 +56,178 @@
 									<p class="text-center"><em>Please complete the following information to begin the application process. If you prefer to inquire another way, you may call or visit the branch you selected to complete an application.</em></p>
 									<div class="center"><button class="btn btn-outline-secondary btn-round btn-sm" type="button" style="" onclick="retreatStep()">Go Back</button></div>
 									<hr>
-									<form class="form-group" id="needs-validation" action="#" novalidate>
+									<div class="form-group">
 										<label for="required" class="required float-right" style="padding-right: 5%;">* Required Fields</label>
-											<div class="row">
-												<div class="col-lg-3">
-													<label for="full-name">Full Name:</label>
-												</div>
-												<div class="col-lg-9">
-													<input type="text" id="first-name" class="form-control" name="first-name" placeholder="First Name" required>
-													<div class="required">*</div>
-													<div class="invalid-feedback">
-												        Please provide a valid First Name.
-												    </div>
-												</div>
+										<div class="row">
+											<div class="col-lg-3">
+												<label for="full-name">Full Name:</label>
 											</div>
-											<div class="row">
-												<div class="col-lg-3">
-													<label for="street-address">Street Address:</label>
-												</div>
-												<div class="col-lg-9">
-													<input type="text" id="street-address" class="form-control" name="street-address" placeholder="Street Address" required>
-													<div class="required">*</div>
-													<div class="invalid-feedback">
-												        Please provide a valid Street Address.
-												    </div>
-												</div>
-											</div>	
-											<div class="row">
-												<div class="col-lg-3">
-													<label for="street-address-2">Apt/Condo:</label>
-												</div>
-												<div class="col-lg-9">
-													<input type="text" id="street-address-2" class="form-control" name="street-address-2" placeholder="Apt/Condo" >
-												</div>
-											</div>	
-											<div class="row">
-												<div class="col-lg-3">
-													<label for="city">City:</label>
-												</div>
-												<div class="col-lg-9">
-													<input type="text" id="city" class="form-control" name="city" placeholder="City" required>
-													<div class="required">*</div>
-													<div class="invalid-feedback">
-												        Please provide a valid City.
-												    </div>
-												</div>
-											</div>	
-											<div class="row">
-												<div class="col-lg-3">
-													<label for="state">State:</label>
-												</div>
-												<div class="col-lg-9">
-													<select id="state" class="custom-select" name="state" required>
-														<option value="Alaska">Alaska</option>
-														<option value="Arizona">Arizona</option>
-														<option value="Arkansas">Arkansas</option>
-														<option value="California">California</option>
-														<option value="Colorado">Colorado</option>
-														<option value="Connecticut">Connecticut</option>
-														<option value="Delaware">Delaware</option>
-														<option value="District of Columbia">District of Columbia</option>
-														<option value="Florida">Florida</option>
-														<option value="Georgia">Georgia</option>
-														<option value="Guam">Guam</option>
-														<option value="Hawaii">Hawaii</option>
-														<option value="Idaho">Idaho</option>
-														<option value="Illinois">Illinois</option>
-														<option value="Indiana">Indiana</option>
-														<option value="Iowa">Iowa</option>
-														<option value="Kansas">Kansas</option>
-														<option value="Kentucky">Kentucky</option>
-														<option value="Louisiana">Louisiana</option>
-														<option value="Maine">Maine</option>
-														<option value="Maryland">Maryland</option>
-														<option value="Massachusetts">Massachusetts</option>
-														<option value="Michigan">Michigan</option>
-														<option value="Minnesota">Minnesota</option>
-														<option value="Mississippi">Mississippi</option>
-														<option value="Missouri">Missouri</option>
-														<option value="Montana">Montana</option>
-														<option value="Nebraska">Nebraska</option>
-														<option value="Nevada">Nevada</option><option value="New Hampshire">New Hampshire</option>
-														<option value="New Jersey">New Jersey</option>
-														<option value="New Mexico">New Mexico</option>
-														<option value="New York">New York</option>
-														<option value="North Carolina">North Carolina</option>
-														<option value="North Dakota">North Dakota</option>
-														<option value="Northern Marianas Islands">Northern Marianas Islands</option>
-														<option value="Ohio">Ohio</option>
-														<option value="Oklahoma">Oklahoma</option>
-														<option value="Oregon">Oregon</option>
-														<option value="Pennsylvania">Pennsylvania</option>
-														<option value="Puerto Rico">Puerto Rico</option>
-														<option value="Rhode Island">Rhode Island</option>
-														<option value="South Carolina">South Carolina</option>
-														<option value="South Dakota">South Dakota</option><option value="Tennessee">Tennessee</option>
-														<option value="Texas">Texas</option>
-														<option value="Utah">Utah</option>
-														<option value="Vermont">Vermont</option>
-														<option value="Virginia">Virginia</option>
-														<option value="Virgin Islands">Virgin Islands</option>
-														<option value="Washington">Washington</option>
-														<option value="West Virginia">West Virginia</option>
-														<option value="Wisconsin">Wisconsin</option>
-														<option value="Wyoming">Wyoming</option>
-													</select>
-													<div class="required">*</div>
-													<div class="invalid-feedback">
-												        Please select a state.
-												    </div>
-												</div>
-											</div>	
-											<div class="row">
-												<div class="col-lg-3">
-													<label for="zipcode">Zip:</label>
-												</div>
-												<div class="col-lg-9">
-													<input id="zipcode" class="form-control" name="zipcode" placeholder="Zip" required>
-													<div class="required">*</div>
-													<div class="invalid-feedback">
-												        Please provide a valid Zip Code.
-												    </div>
-												</div>
-											</div>	
-											<div class="row">
-												<div class="col-lg-3">
-													<label for="phone-number">Phone Number:</label>
-												</div>
-												<div class="col-lg-9">
-													<input type="tel" id="phone-number" class="form-control" name="phone-number" placeholder="(123)-456-7890" required>
-													<div class="required">*</div>
-													<div class="invalid-feedback">
-												        Please provide a valid Phone Number.
-												    </div>
-												</div>
+											<div class="col-lg-9">
+												<input type="text" id="first-name" class="form-control" name="first-name" placeholder="First Name" required>
+												<div class="required">*</div>
+												<div class="invalid-feedback">
+											        Please provide a valid First Name.
+											    </div>
 											</div>
-											<div class="row">
-												<div class="col-lg-3">
-													<label for="phone-type">Phone Type:</label>
-												</div>
-												<div class="col-lg-9">
-													<select id="phone-type" class="custom-select" name="phone-type">
-														<option value="Home">Home</option>
-														<option value="Work">Work</option>
-														<option value="Cell">Cell</option>
-													</select>
-												</div>
+										</div>
+										<div class="row">
+											<div class="col-lg-3">
+												<label for="street-address">Street Address:</label>
 											</div>
-											<div class="row">
-												<div class="col-lg-3">
-													<label for="email">Email Address:</label>
-												</div>
-												<div class="col-lg-9">
-													<input type="email" id="email" class="form-control" name="email" placeholder="example@example.com" required>
-													<div class="required">*</div>
-													<div class="invalid-feedback">
-												        Please provide a valid Email Address.
-												    </div>
-												</div>
+											<div class="col-lg-9">
+												<input type="text" id="street-address" class="form-control" name="street-address" placeholder="Street Address" required>
+												<div class="required">*</div>
+												<div class="invalid-feedback">
+											        Please provide a valid Street Address.
+											    </div>
 											</div>
+										</div>	
+										<div class="row">
+											<div class="col-lg-3">
+												<label for="street-address-2">Apt/Condo:</label>
+											</div>
+											<div class="col-lg-9">
+												<input type="text" id="street-address-2" class="form-control" name="street-address-2" placeholder="Apt/Condo" >
+											</div>
+										</div>	
+										<div class="row">
+											<div class="col-lg-3">
+												<label for="city">City:</label>
+											</div>
+											<div class="col-lg-9">
+												<input type="text" id="city" class="form-control" name="city" placeholder="City" required>
+												<div class="required">*</div>
+												<div class="invalid-feedback">
+											        Please provide a valid City.
+											    </div>
+											</div>
+										</div>	
+										<div class="row">
+											<div class="col-lg-3">
+												<label for="state">State:</label>
+											</div>
+											<div class="col-lg-9">
+												<select id="state" class="custom-select" name="state" required>
+													<option value="Alaska">Alaska</option>
+													<option value="Arizona">Arizona</option>
+													<option value="Arkansas">Arkansas</option>
+													<option value="California">California</option>
+													<option value="Colorado">Colorado</option>
+													<option value="Connecticut">Connecticut</option>
+													<option value="Delaware">Delaware</option>
+													<option value="District of Columbia">District of Columbia</option>
+													<option value="Florida">Florida</option>
+													<option value="Georgia">Georgia</option>
+													<option value="Guam">Guam</option>
+													<option value="Hawaii">Hawaii</option>
+													<option value="Idaho">Idaho</option>
+													<option value="Illinois">Illinois</option>
+													<option value="Indiana">Indiana</option>
+													<option value="Iowa">Iowa</option>
+													<option value="Kansas">Kansas</option>
+													<option value="Kentucky">Kentucky</option>
+													<option value="Louisiana">Louisiana</option>
+													<option value="Maine">Maine</option>
+													<option value="Maryland">Maryland</option>
+													<option value="Massachusetts">Massachusetts</option>
+													<option value="Michigan">Michigan</option>
+													<option value="Minnesota">Minnesota</option>
+													<option value="Mississippi">Mississippi</option>
+													<option value="Missouri">Missouri</option>
+													<option value="Montana">Montana</option>
+													<option value="Nebraska">Nebraska</option>
+													<option value="Nevada">Nevada</option><option value="New Hampshire">New Hampshire</option>
+													<option value="New Jersey">New Jersey</option>
+													<option value="New Mexico">New Mexico</option>
+													<option value="New York">New York</option>
+													<option value="North Carolina">North Carolina</option>
+													<option value="North Dakota">North Dakota</option>
+													<option value="Northern Marianas Islands">Northern Marianas Islands</option>
+													<option value="Ohio">Ohio</option>
+													<option value="Oklahoma">Oklahoma</option>
+													<option value="Oregon">Oregon</option>
+													<option value="Pennsylvania">Pennsylvania</option>
+													<option value="Puerto Rico">Puerto Rico</option>
+													<option value="Rhode Island">Rhode Island</option>
+													<option value="South Carolina">South Carolina</option>
+													<option value="South Dakota">South Dakota</option><option value="Tennessee">Tennessee</option>
+													<option value="Texas">Texas</option>
+													<option value="Utah">Utah</option>
+													<option value="Vermont">Vermont</option>
+													<option value="Virginia">Virginia</option>
+													<option value="Virgin Islands">Virgin Islands</option>
+													<option value="Washington">Washington</option>
+													<option value="West Virginia">West Virginia</option>
+													<option value="Wisconsin">Wisconsin</option>
+													<option value="Wyoming">Wyoming</option>
+												</select>
+												<div class="required">*</div>
+												<div class="invalid-feedback">
+											        Please select a state.
+											    </div>
+											</div>
+										</div>	
+										<div class="row">
+											<div class="col-lg-3">
+												<label for="zipcode">Zip:</label>
+											</div>
+											<div class="col-lg-9">
+												<input id="zipcode" class="form-control" name="zipcode" placeholder="Zip" required>
+												<div class="required">*</div>
+												<div class="invalid-feedback">
+											        Please provide a valid Zip Code.
+											    </div>
+											</div>
+										</div>	
+										<div class="row">
+											<div class="col-lg-3">
+												<label for="phone-number">Phone Number:</label>
+											</div>
+											<div class="col-lg-9">
+												<input type="tel" id="phone-number" class="form-control" name="phone-number" placeholder="(123)-456-7890" required>
+												<div class="required">*</div>
+												<div class="invalid-feedback">
+											        Please provide a valid Phone Number.
+											    </div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-lg-3">
+												<label for="phone-type">Phone Type:</label>
+											</div>
+											<div class="col-lg-9">
+												<select id="phone-type" class="custom-select" name="phone-type">
+													<option value="Home">Home</option>
+													<option value="Work">Work</option>
+													<option value="Cell">Cell</option>
+												</select>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-lg-3">
+												<label for="email">Email Address:</label>
+											</div>
+											<div class="col-lg-9">
+												<input type="email" id="email" class="form-control" name="email" placeholder="example@example.com" required>
+												<div class="required">*</div>
+												<div class="invalid-feedback">
+											        Please provide a valid Email Address.
+											    </div>
+											</div>
+										</div>
 
 										<p style="margin-top: 16px;"></p>
 										<div class="clearfix"></div>
 										<div class="center"><button class="btn btn-primary btn-round mx-auto" type="button" onclick="advanceStep()" style="">Next</button></div>
 										<div class="clearfix"></div>
 									</div>
-									<div class="form-step animated fadeIn hidden-on-start">
-										<h5 class="text-center" style="margin-top: 16px;">Step 3 of 3: Loan Information</h5>
-										<p class="text-center"><em>Let us know a little bit of information about the kind of loan you are looking for.</em></p>
-										<div class="center"><button class="btn btn-outline-secondary btn-round btn-sm" type="button" style="" onclick="retreatStep()">Go Back</button></div>
-										<hr>
+								</div>
+								<div class="form-step animated fadeIn hidden-on-start">
+									<h5 class="text-center" style="margin-top: 16px;">Step 3 of 3: Loan Information</h5>
+									<p class="text-center"><em>Let us know a little bit of information about the kind of loan you are looking for.</em></p>
+									<div class="center"><button class="btn btn-outline-secondary btn-round btn-sm" type="button" style="" onclick="retreatStep()">Go Back</button></div>
+									<hr>
+									<div class="form-group">
 										<div class="row" style="margin-top:24px;">
 											<div class="col-lg-3">
 												<label for="loan-amount">Loan Amount:</label>
@@ -307,14 +310,14 @@
 												<textarea id="comments" class="form-control"></textarea>
 											</div>
 										</div>
-											
+										
 										<p style="margin-top: 16px;"> <strong>Note:</strong> <em>This is a preliminary submission and not an actual credit application. Our branch employee will contact you within 24 hours (during business hours) to complete the application process. Subject to our usual credit requirement. Borrowers must provide adequate property as collateral.</em></p>
 										<div class="clearfix"></div>
 										<div class="center"><button class="btn btn-primary btn-round mx-auto" type="submit" style="">Submit</button></div>
 										<div class="clearfix"></div>
-									</form>
+									</div>	
 								</div>
-							</div>
+							</form>
 						</div>
 					</div>
 				</div>	

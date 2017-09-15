@@ -97,6 +97,7 @@ textarea {
 
 .btn {
   margin-top: 16px;
+  margin-bottom: 16px;
   padding-left: 15%;
   padding-right: 15%;
   border-radius: 2px !important;
@@ -143,6 +144,9 @@ textarea {
 
 .margin-correct {
   margin-top: 8px !important; }
+
+.form-group {
+  margin-bottom: 0; }
 
 form .row {
   margin-top: 5px; }
