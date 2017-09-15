@@ -1,8 +1,18 @@
 /* main.scss */
 
 
-/* variables */
+/* colors */
 $primary: rgba(114, 137, 218, 1.0);
+// $primary: #ef5350;
+// $primary: #3D5AFE;
+// $primary: #F06292;
+// $primary: #5C6BC0;
+// $primary: #78909C;
+// $primary: #;
+// $primary: #;
+// $primary: #;
+
+/* background gradient */
 
 input, textarea, button, label, option, select, .button, .hndle {
 	transition: all .25s cubic-bezier(0.64,0.20,0.02,0.35);
@@ -19,7 +29,7 @@ body {
 	width: 100%;
 	font-family: 'Montserrat', Helvetica, Arial, sans-serif;	
    	font-size: 14px;
-   	background: rgba(114, 137, 218, .8);
+   	background-image: linear-gradient(-5deg, lighten($primary, 5%), lighten($primary, 10%));
    	box-shadow: inset 0 0 300px rgba(255,255,255,0.1);
    	-webkit-font-smoothing: antialiased;
    	-moz-osx-font-smoothing: grayscale;
@@ -131,6 +141,11 @@ textarea {
 		color: white;
 		background: $primary !important;
 	}
+}
+
+.btn-sm {
+	margin-top: 0 !important;
+	margin-bottom: 16px;
 }
 
 .card {
