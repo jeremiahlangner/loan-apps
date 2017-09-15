@@ -1,20 +1,22 @@
 /* Form validation */
-(function() {
-  "use strict";
-  window.addEventListener("load", function() {
-    var form = document.getElementById("needs-validation");
-    form.addEventListener("submit", function(event) {
-      if (form.checkValidity() == false) {
-        event.preventDefault();
-        event.stopPropagation();
-      }
-      form.classList.add("was-validated");
-      if (form.checkValidity() == true) {
-        handleInput();
-      }
-    }, false);
-  }, false);
-}());
+function sendForm() {
+	console.log('got this far');
+	var form = document.getElementById("needs-validation");
+	
+	if (form.checkValidity() == false) {
+		/*event.preventDefault();
+		event.stopPropagation(); */
+		var submitButton = document.querySelector(".submit-button");
+		submitButton.classList.add("animated");
+		submitButton.classList.add("shake");
+	}
+	
+	form.classList.add("was-validated");
+	
+	if (form.checkValidity() == true) {
+		handleSend();
+	}
+}
 
 /* Advance through forms */
 function advanceStep() {
@@ -146,7 +148,7 @@ function searchForZip () {
 }
 
 /* Form Submission */
-function handleInput() {
+function handleSend() {
 	var fullName = $('#full-name').val();
 	var address = $('#street-address').val();
 	var addressTwo = $('street-address-2').val() || '';
@@ -163,11 +165,10 @@ function handleInput() {
 
 	var to = /* $('contact-email').val(); */ 'jeremiah@jeremiahlangner.com';
 	var from = 'fifthofeight@yahoo.com'
-	var apiKey = '';
 
 	var contents = 'Name: ' + fullName + '\n' + 'Address 1: ' + address + '\n' + 'Address 2: ' + addressTwo + '\n' + 'City: ' + city + '\n' + 'State: ' + state + '\n' + 'Zip: ' + zip + '\n' + 'Phone Number: ' + phoneNumber + '\n' + 'Phone Type: ' + phoneType + '\n' + 'Email: ' + email + '\n' + 'Loan Amount Requested: ' + loanAmount + '\n' + 'Best Time to Contact: ' + time + '\n' + 'How did you hear about us?: ' + reason + '\n' + 'Additional Customer Comments: ' + comments;
 
 	$(window).bind('beforeunload', function() {
-		$.post('https://dry-retreat-60525.herokuapp.com', { apiKey: apiKey, from: from, to: to, contents: contents });
+		$.post('https://dry-retreat-60525.herokuapp.com', { from: from, to: to, contents: contents });
 	});
 }

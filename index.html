@@ -317,15 +317,37 @@
 										</div>
 										
 										<p style="margin-top: 16px;"> <strong>Note:</strong> <em>This is a preliminary submission and not an actual credit application. Our branch employee will contact you within 24 hours (during business hours) to complete the application process. Subject to our usual credit requirement. Borrowers must provide adequate property as collateral.</em></p>
+										<div class="invalid-feedback">
+											<h6>Some elements in your submission were missing. Please go back and ensure you have filled out all requirements.</h6>
+										</div>
 										<div class="clearfix"></div>
-										<div class="center"><button class="btn btn-primary btn-round mx-auto" type="submit" style="">Submit</button></div>
+										<div class="center"><button class="btn btn-primary btn-round mx-auto submit-button" type="button" onclick="sendForm()">Submit</button></div>
 										<div class="clearfix"></div>
 									</div>	
 								</div>
 							</form>
 						</div>
 					</div>
-				</div>	
+				</div>
+			</div>
+
+			<div class="modal fade" id="thanks-modal" tabindex="-1" role="dialog" aria-labelledby="thanks-modal-label" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title" id="thanks-modal-label">Thanks For Contacting Us!</h5>
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			      </div>
+			      <div class="modal-body">
+			      	<p>Thanks for contacting us. Please wait while we ensure that your submission was received.</p>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-primary" data-dismiss="modal" disabled>Close</button>
+			      </div>
+			    </div>
+			  </div>
 			</div>
 
 			<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
