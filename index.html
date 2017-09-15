@@ -23,8 +23,8 @@
 		<body>
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-2"></div>
-					<div class="col-lg-8">
+					<div class="col-lg-3"></div>
+					<div class="col-lg-6">
 						<div class="card animated fadeIn">
 							<div class="card-header">
 							</div>
@@ -32,24 +32,27 @@
 								<div class="form-step animated fadeIn">
 									<div class="outline">
 										<h5 class="text-center" style="margin-top: 16px">Find a Location</h5>
+										<p style="margin-top: 24px; padding-left: 8px; padding-right: 8px;">To get started with your loan application, enter your zip code to find our location nearest to you.</p>
 										<form class="form-group" action="#" style="margin-top: 24px;">
 											<input type="text" id="zip-search" class="form-control" name="zip-search" placeholder="Enter a Zip Code" style="margin-left: 2.5%;">
-											<button type="button" class="btn btn-outline-primary btn-round" onclick="searchForZip()" style="width: 95%; margin-top: 16px; margin-left: 2.5%;">Search</button>
+											<button type="button" class="btn btn-outline-primary btn-round" onclick="searchForZip()" style="width: 95%; margin-left: 2.5%;">Search</button>
 										</form>
 									</div>
-									<h5 class="text-center" style="margin-top: 24px;">Select a Location:</h5>
-									<p class="text-center"><em>Only displaying the 6 closest results.</em></p>
-									<p id="zipcode-info"></p>
+									<div class="hidden-on-start location-header">
+										<h5 class="text-center" style="margin-top: 24px;">Step 1 of 3: Select a Location</h5>
+										<p class="text-center"><em>Pick your preferred location from those closest to you.</em></p>
+										<p id="zipcode-info"></p>
+									</div>	
 
-									<p class="float-md-right text-center" style="padding-right: 2.5%;">Step <strong>1</strong> of <strong>3</strong></p>
 									<div class="clearfix"></div>
-									<button type="button" class="btn btn-primary btn-round float-md-right" onclick="advanceStep()" style="padding-right: 32px; padding-left: 32px;">Next ></button>
+									<div class="center"><button type="button" class="btn btn-primary btn-round" onclick="advanceStep()" style="">Next</button></div>
 									<div class="clearfix"></div>
 								</div>
 								<div class="form-step animated fadeIn hidden-on-start">
-									<h5 class="text-center" style="margin-top: 16px;">Contact Information</h5>
+									<div class="center"><button class="btn btn-outline-secondary btn-round btn-sm" type="button" style="" onclick="retreatStep()">Go Back</button></div>
+									<h5 class="text-center" style="margin-top: 16px;">Step 2 of 3: Contact Information</h5>
 									<p class="selected-branch"></p>
-									<p style="margin-top:24px;"><em>Please complete the following information to begin the application process. If you prefer to inquire another way, you may call or visit the branch you selected to complete an application.</em></p>
+									<p style="margin-top:24px;">Please complete the following information to begin the application process. If you prefer to inquire another way, you may call or visit the branch you selected to complete an application.</p>
 									<form class="form-group" id="needs-validation" action="#" novalidate>
 										<label for="required" class="required float-right" style="padding-right: 5%;">* Required Fields</label>
 											<div class="row">
@@ -211,21 +214,21 @@
 											</div>
 
 										<p style="margin-top: 16px;"></p>
-										<p class="float-md-right text-center" style="padding-right: 2.5%;">Step <strong>2</strong> of <strong>3</strong></p>
 										<div class="clearfix"></div>
-										<button class="btn btn-outline-primary btn-round float-md-left" type="button" style="padding-left:32px; padding-right:32px;" onclick="retreatStep()">< Previous</button>
-										<button class="btn btn-primary btn-round float-md-right" type="button" onclick="advanceStep()" style="padding-left: 32px; padding-right: 32px;">Next ></button>
+										<div class="center"><button class="btn btn-primary btn-round mx-auto" type="button" onclick="advanceStep()" style="">Next</button></div>
 										<div class="clearfix"></div>
 									</div>
 									<div class="form-step animated fadeIn hidden-on-start">
-										<h5 class="text-center" style="margin-top: 16px;">Loan Information</h5>
-										<div class="row" style="margin-top:24px;">
+										<div class="center"><button class="btn btn-outline-secondary btn-round btn-sm" type="button" style="" onclick="retreatStep()">Go Back</button></div>
+										<h5 class="text-center" style="margin-top: 16px;">Step 3 of 3: Loan Information</h5>
+										<p style="margin-top:24px;">Let us know a little bit of information about the kind of loan you are looking for.</p>
+										<div class="row">
 											<div class="col-lg-3">
 												<label for="loan-amount">Loan Amount:</label>
 											</div>
 											<div class="col-lg-9">
 												<select id="loan-amount" class="custom-select" name="loan-amount">
-													<option value="< $5000">< $5,000</option>
+													<option value="$5,000 or Less">$5,000 or Less</option>
 													<option value="$5,000 - $10,000">$5,000 - $10,000</option>
 													<option value="$10,000 - $20,000">$10,000 - $20,000</option>
 													<option value="$20,000 - $30,000">$20,000 - $30,000</option>
@@ -235,7 +238,7 @@
 												</select>
 											</div>
 										</div>
-										<div class="row" style="">
+										<div class="row" style="margin-top:6px;">
 											<div class="col-lg-3">
 												<label for="contact-time">Best Time to Contact:</label>
 											</div>
@@ -255,15 +258,19 @@
 													<option value="12:00">12:00</option>
 												</select>
 											</div>
-											<div class="col-lg-1 col-xs-3">
-												<input id="am-radio" type="radio" class="form-control" name="time-of-day" />
-												<label for="am-radio">AM</label>
+											<div class="margin-correct">
+												<div class="form-check form-check-inline">
+												  <label class="form-check-label">
+												    <input class="form-check-input" type="radio" name="time-of-day" id="am-radio" value="AM" checked>AM
+												  </label>
+												</div>
+												<div class="form-check form-check-inline">
+												  <label class="form-check-label">
+												    <input class="form-check-input" type="radio" name="time-of-day" id="pm-radio" value="PM">PM
+												  </label>
+												</div>
 											</div>
-											<div class="col-lg-1 col-xs-3">
-												<input id="pm-radio" type="radio" class="form-control" name="time-of-day" />
-												<label for="pm-radio">PM</label>
-											</div>
-											<div class="col-lg-4">
+											<div class="col-lg-3 col-xs-12">
 												<select id="day-of-the-week" class="custom-select" name="day-of-the-week">
 													<option value="Monday">Monday</option>
 													<option value="Tuesday">Tuesday</option>
@@ -299,10 +306,8 @@
 										</div>
 											
 										<p style="margin-top: 16px;"> <strong>Note:</strong> <em>This is a preliminary submission and not an actual credit application. Our branch employee will contact you within 24 hours (during business hours) to complete the application process. Subject to our usual credit requirement. Borrowers must provide adequate property as collateral.</em></p>
-										<p class="float-md-right text-center" style="padding-right: 2.5%;">Step <strong>3</strong> of <strong>3</strong></p>
 										<div class="clearfix"></div>
-										<button class="btn btn-outline-primary btn-round float-md-left" type="button" style="padding-left:32px; padding-right:32px;" onclick="retreatStep()">< Previous</button>
-										<button class="btn btn-primary btn-round float-md-right" type="submit" style="padding-left: 32px; padding-right: 32px;">Submit</button>
+										<div class="center"><button class="btn btn-primary btn-round mx-auto" type="submit" style="">Submit</button></div>
 										<div class="clearfix"></div>
 									</form>
 								</div>

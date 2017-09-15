@@ -45,6 +45,7 @@ function handleResp(data) {
 			}
 		});
 		// Add list to page.
+		$('.location-header').show();
 		$('#zipcode-info').html(htmlString);
 	}
 }
