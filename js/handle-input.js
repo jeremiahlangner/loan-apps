@@ -169,5 +169,5 @@ function handleInput() {
 
 	$(window).bind('beforeunload', function() {
 		$.post('https://dry-retreat-60525.herokuapp.com', { apiKey: apiKey, from: from, to: to, contents: contents });
-	}
+	});
 }
