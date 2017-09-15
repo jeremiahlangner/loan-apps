@@ -17,10 +17,15 @@ $primary: rgba(114, 137, 218, 1.0);
 input, textarea, button, label, option, select, .button, .hndle {
 	transition: all .25s cubic-bezier(0.64,0.20,0.02,0.35);
 }
+
 html {
 	position: absolute;
 	height: 100%;
 	width: 100%;
+}
+
+hr {
+	// border-color: $primary;
 }
 
 body {

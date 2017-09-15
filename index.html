@@ -33,7 +33,7 @@
 									<div class="outline">
 										<h5 class="text-center" style="margin-top: 16px">Find a Location</h5>
 										<p class="text-center" style="padding-left: 8px; padding-right: 8px;"><em>To get started with your loan application, enter your zip code to find our location nearest to you.</em></p>
-										<form class="form-group" action="#" style="margin-top: 24px;">
+										<form class="form-group" action="#" style="margin-top: 16px;">
 											<input type="text" id="zip-search" class="form-control" name="zip-search" placeholder="Enter a Zip Code" style="margin-left: 2.5%;">
 											<button type="button" class="btn btn-outline-primary btn-round" onclick="searchForZip()" style="width: 95%; margin-left: 2.5%;">Search</button>
 										</form>
@@ -53,6 +53,7 @@
 									<p class="selected-branch"></p>
 									<p class="text-center"><em>Please complete the following information to begin the application process. If you prefer to inquire another way, you may call or visit the branch you selected to complete an application.</em></p>
 									<div class="center"><button class="btn btn-outline-secondary btn-round btn-sm" type="button" style="" onclick="retreatStep()">Go Back</button></div>
+									<hr>
 									<form class="form-group" id="needs-validation" action="#" novalidate>
 										<label for="required" class="required float-right" style="padding-right: 5%;">* Required Fields</label>
 											<div class="row">
@@ -222,6 +223,7 @@
 										<h5 class="text-center" style="margin-top: 16px;">Step 3 of 3: Loan Information</h5>
 										<p class="text-center"><em>Let us know a little bit of information about the kind of loan you are looking for.</em></p>
 										<div class="center"><button class="btn btn-outline-secondary btn-round btn-sm" type="button" style="" onclick="retreatStep()">Go Back</button></div>
+										<hr>
 										<div class="row" style="margin-top:24px;">
 											<div class="col-lg-3">
 												<label for="loan-amount">Loan Amount:</label>
