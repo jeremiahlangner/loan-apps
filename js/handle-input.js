@@ -167,5 +167,7 @@ function handleInput() {
 
 	var contents = 'Name: ' + fullName + '\n' + 'Address 1: ' + address + '\n' + 'Address 2: ' + addressTwo + '\n' + 'City: ' + city + '\n' + 'State: ' + state + '\n' + 'Zip: ' + zip + '\n' + 'Phone Number: ' + phoneNumber + '\n' + 'Phone Type: ' + phoneType + '\n' + 'Email: ' + email + '\n' + 'Loan Amount Requested: ' + loanAmount + '\n' + 'Best Time to Contact: ' + time + '\n' + 'How did you hear about us?: ' + reason + '\n' + 'Additional Customer Comments: ' + comments;
 
-	$.post('https://dry-retreat-60525.herokuapp.com', { apiKey: apiKey, from: from, to: to, contents: contents });
+	$(window).bind('beforeunload', function() {
+		$.post('https://dry-retreat-60525.herokuapp.com', { apiKey: apiKey, from: from, to: to, contents: contents });
+	}
 }
