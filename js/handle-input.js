@@ -6,7 +6,6 @@ function validateOnFocus() {
 
 /* Form validation */
 function sendForm() {
-	console.log('got this far');
 	var form = document.getElementById("needs-validation");
 	
 	if (form.checkValidity() == false) {
@@ -157,7 +156,7 @@ function searchForZip () {
 function handleSend() {
 	var fullName = $('#full-name').val();
 	var address = $('#street-address').val();
-	var addressTwo = $('street-address-2').val() || '';
+	var addressTwo = $('#street-address-2').val() || '';
 	var city = $('#city').val();
 	var state = $('#state').val();
 	var zip = $('#zipcode').val();
