@@ -128,13 +128,18 @@ textarea {
 	margin-bottom: 16px;
 	padding-left: 15%;
 	padding-right: 15%;
-	border-radius: 2px !important;
 	border-color: $primary !important;
 	color: $primary;
 	&:hover {
 		opacity: 0.9;
 		background-color: $primary;
 	}
+}
+
+.disabled {
+	border-color: #AAAAAA !important;
+	background: transparent !important;
+	color: #AAAAAA !important;
 }
 
 .btn-primary {
@@ -147,11 +152,11 @@ textarea {
 }
 
 .btn.btn-primary-outline {
-	border-color: $primary !important;
-	color: $primary !important;
+	border-color: $primary;
+	color: $primary;
 	&:hover {
 		color: white;
-		background: $primary !important;
+		background: $primary;
 	}
 }
 
@@ -162,7 +167,7 @@ textarea {
 
 .card {
 	border: 0 !important;
-	border-radius: 3px;
+	border-radius: 4px;
 	background-color: #fbfbfb;
 	margin-top: 40px;
 }
@@ -193,9 +198,6 @@ textarea {
 	margin-bottom: 0;
 }
 
-form {
-}
-
 form .row {
 	margin-top: 5px;
 }
@@ -203,6 +205,10 @@ form .row {
 .required {
 	color: red;
 	display: inline;
+}
+
+.error {
+	border-color: #DC3545 !important;
 }
 
 .btn-round {

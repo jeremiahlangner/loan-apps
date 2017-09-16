@@ -1,10 +1,28 @@
 /* Form validation */
-function validateOnFocus() {
+(function() {
+	var els = document.getElementsByTagName("INPUT");
+	var submitButton = document.querySelector(".submit-button");
 
-}
+	[].forEach.call(els, function (el) {
+		el.addEventListener("input", function (event) {
+			if (el.validity.valid) {
+				submitButton.classList.remove("disabled")
+				submitButton.classList.remove("shake")
+				$(submitButton).prev().hide()
+				el.classList.remove("error")
+				$(el).nextAll().eq(1).hide()
+			}
+			if (!el.validity.valid) {
+				submitButton.classList.add("disabled")
+				submitButton.classList.add("shake")
+				$(submitButton).prev().show()
+				el.classList.add("error")
+				$(el).nextAll().eq(1).show()
+			}
+		})
+	});
+})();
 
-
-/* Form validation */
 function sendForm() {
 	var form = document.getElementById("needs-validation");
 	
@@ -15,8 +33,6 @@ function sendForm() {
 		submitButton.classList.add("animated");
 		submitButton.classList.add("shake");
 	}
-	
-	form.classList.add("was-validated");
 	
 	if (form.checkValidity() == true) {
 		handleSend();
@@ -30,7 +46,6 @@ function advanceStep() {
 
 	while(finding) {
 		if($(currentStep).css('display') == 'block') {
-			console.log(currentStep);
 			$(currentStep).toggle();
 			$(currentStep).next().toggle();
 			break;	
@@ -46,7 +61,6 @@ function retreatStep() {
 
 	while(finding) {
 		if($(currentStep).css('display') == 'block') {
-			console.log(currentStep);
 			$(currentStep).toggle();
 			$(currentStep).prev().toggle();
 			break;	

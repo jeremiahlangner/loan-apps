@@ -35,7 +35,11 @@
 										<h5 class="text-center" style="margin-top: 16px">Find a Location</h5>
 										<p class="text-center" style="padding-left: 8px; padding-right: 8px;"><em>To get started with your loan application, enter your zip code to find our location nearest to you.</em></p>
 										<div class="form-group" style="margin-top: 16px;">
-											<input type="text" id="zip-search" class="form-control" name="zip-search" placeholder="Enter a Zip Code" style="margin-left: 2.5%;">
+											<input type="text" id="zip-search" class="form-control" name="zip-search" placeholder="Enter a Zip Code" style="margin-left: 2.5%;" required pattern="[0-9]{5}">
+											<div></div>
+											<div class="invalid-feedback text-center" aria-live="polite">
+											    Please provide a valid zipcode.
+											</div>
 											<button type="button" class="btn btn-outline-primary btn-round" onclick="searchForZip()" style="width: 95%; margin-left: 2.5%;">Search</button>
 										</div>
 									</div>
@@ -60,13 +64,13 @@
 										<label for="required" class="required float-right" style="padding-right: 5%;">* Required Fields</label>
 										<div class="row">
 											<div class="col-lg-3">
-												<label for="full-name">Name:</label>
+												<label for="full-name">Full Name:</label>
 											</div>
 											<div class="col-lg-9">
 												<input type="text" id="full-name" class="form-control" name="full-name" placeholder="Full Name" required>
 												<div class="required">*</div>
-												<div class="invalid-feedback">
-											        Please provide a valid Name.
+												<div class="invalid-feedback" aria-live="polite">
+											        Please provide your Full Name.
 											    </div>
 											</div>
 										</div>
@@ -77,7 +81,7 @@
 											<div class="col-lg-9">
 												<input type="text" id="street-address" class="form-control" name="street-address" placeholder="Street Address" required>
 												<div class="required">*</div>
-												<div class="invalid-feedback">
+												<div class="invalid-feedback" aria-live="polite">
 											        Please provide a valid Street Address.
 											    </div>
 											</div>
@@ -97,7 +101,7 @@
 											<div class="col-lg-9">
 												<input type="text" id="city" class="form-control" name="city" placeholder="City" required>
 												<div class="required">*</div>
-												<div class="invalid-feedback">
+												<div class="invalid-feedback" aria-live="polite">
 											        Please provide a valid City.
 											    </div>
 											</div>
@@ -162,7 +166,7 @@
 													<option value="Wyoming">Wyoming</option>
 												</select>
 												<div class="required">*</div>
-												<div class="invalid-feedback">
+												<div class="invalid-feedback" aria-live="polite">
 											        Please select a state.
 											    </div>
 											</div>
@@ -172,9 +176,9 @@
 												<label for="zipcode">Zip:</label>
 											</div>
 											<div class="col-lg-9">
-												<input id="zipcode" class="form-control" name="zipcode" placeholder="Zip" required>
+												<input id="zipcode" class="form-control" name="zipcode" placeholder="Zip" required pattern="[0-9]{5}">
 												<div class="required">*</div>
-												<div class="invalid-feedback">
+												<div class="invalid-feedback" aria-live="polite">
 											        Please provide a valid Zip Code.
 											    </div>
 											</div>
@@ -184,9 +188,9 @@
 												<label for="phone-number">Phone Number:</label>
 											</div>
 											<div class="col-lg-9">
-												<input type="tel" id="phone-number" class="form-control" name="phone-number" placeholder="(123)-456-7890" required>
+												<input type="tel" id="phone-number" class="form-control" name="phone-number" placeholder="123-456-7890" required pattern="[0-9]{3}[ |-][0-9]{3}[ |-][0-9]{4}">
 												<div class="required">*</div>
-												<div class="invalid-feedback">
+												<div class="invalid-feedback" aria-live="polite">
 											        Please provide a valid Phone Number.
 											    </div>
 											</div>
@@ -210,7 +214,7 @@
 											<div class="col-lg-9">
 												<input type="email" id="email" class="form-control" name="email" placeholder="example@example.com" required>
 												<div class="required">*</div>
-												<div class="invalid-feedback">
+												<div class="invalid-feedback" aria-live="polite">
 											        Please provide a valid Email Address.
 											    </div>
 											</div>
@@ -244,7 +248,7 @@
 													<option value="$50,000+">$50,000+</option>
 												</select>
 												<div class="required">*</div>
-												<div class="invalid-feedback">
+												<div class="invalid-feedback" aria-live="polite">
 											        Please select an amount.
 											    </div>
 											</div>
@@ -317,11 +321,13 @@
 										</div>
 										
 										<p style="margin-top: 16px;"> <strong>Note:</strong> <em>This is a preliminary submission and not an actual credit application. Our branch employee will contact you within 24 hours (during business hours) to complete the application process. Subject to our usual credit requirement. Borrowers must provide adequate property as collateral.</em></p>
-										<div class="invalid-feedback">
-											<h6>Some elements in your submission were missing. Please go back and ensure you have filled out all requirements.</h6>
-										</div>
 										<div class="clearfix"></div>
-										<div class="center"><button class="btn btn-primary btn-round mx-auto submit-button" type="button" onclick="sendForm()">Submit</button></div>
+										<div class="center">
+											<div class="invalid-feedback text-center" aria-live="polite">
+												Some elements in your submission were missing. Please go back and ensure you have filled out all requirements.
+											</div>
+											<button class="btn btn-primary btn-round mx-auto submit-button" type="button" onclick="sendForm()">Submit</button>
+										</div>
 										<div class="clearfix"></div>
 									</div>	
 								</div>

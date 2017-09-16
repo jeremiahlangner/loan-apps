@@ -102,12 +102,16 @@ textarea {
   margin-bottom: 16px;
   padding-left: 15%;
   padding-right: 15%;
-  border-radius: 2px !important;
   border-color: #7289da !important;
   color: #7289da; }
   .btn:hover {
     opacity: 0.9;
     background-color: #7289da; }
+
+.disabled {
+  border-color: #AAAAAA !important;
+  background: transparent !important;
+  color: #AAAAAA !important; }
 
 .btn-primary {
   background: #7289da;
@@ -117,11 +121,11 @@ textarea {
     color: #7289da; }
 
 .btn.btn-primary-outline {
-  border-color: #7289da !important;
-  color: #7289da !important; }
+  border-color: #7289da;
+  color: #7289da; }
   .btn.btn-primary-outline:hover {
     color: white;
-    background: #7289da !important; }
+    background: #7289da; }
 
 .btn-sm {
   margin-top: 0 !important;
@@ -129,7 +133,7 @@ textarea {
 
 .card {
   border: 0 !important;
-  border-radius: 3px;
+  border-radius: 4px;
   background-color: #fbfbfb;
   margin-top: 40px; }
 
@@ -156,6 +160,9 @@ form .row {
 .required {
   color: red;
   display: inline; }
+
+.error {
+  border-color: #DC3545 !important; }
 
 .btn-round {
   border-radius: 100px !important; }
