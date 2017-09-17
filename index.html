@@ -51,14 +51,14 @@
 									</div>	
 
 									<div class="clearfix"></div>
-									<div class="center"><button type="button" class="btn btn-primary btn-round" onclick="advanceStep()" style="">Next</button></div>
+									<div class="center"><button type="button" class="btn btn-primary btn-round next" onclick="advanceFormStep()" style="">Next</button></div>
 									<div class="clearfix"></div>
 								</div>
 								<div class="form-step animated fadeIn hidden-on-start">
 									<h5 class="text-center" style="margin-top: 16px;">Step 2 of 3: Contact Information</h5>
 									<p class="selected-branch"></p>
 									<p class="text-center"><em>Please complete the following information to begin the application process. If you prefer to inquire another way, you may call or visit the branch you selected to complete an application.</em></p>
-									<div class="center"><button class="btn btn-outline-secondary btn-round btn-sm" type="button" style="" onclick="retreatStep()">Go Back</button></div>
+									<div class="center"><button class="btn btn-outline-secondary btn-round btn-sm previous" type="button" style="" onclick="retreatFormStep()">Go Back</button></div>
 									<hr>
 									<div class="form-group">
 										<label for="required" class="required float-right" style="padding-right: 5%;">* Required Fields</label>
@@ -222,14 +222,14 @@
 
 										<p style="margin-top: 16px;"></p>
 										<div class="clearfix"></div>
-										<div class="center"><button class="btn btn-primary btn-round mx-auto" type="button" onclick="advanceStep()" style="">Next</button></div>
+										<div class="center"><button class="btn btn-primary btn-round next" type="button" onclick="advanceFormStep()" style="">Next</button></div>
 										<div class="clearfix"></div>
 									</div>
 								</div>
 								<div class="form-step animated fadeIn hidden-on-start">
 									<h5 class="text-center" style="margin-top: 16px;">Step 3 of 3: Loan Information</h5>
 									<p class="text-center"><em>Let us know a little bit of information about the kind of loan you are looking for.</em></p>
-									<div class="center"><button class="btn btn-outline-secondary btn-round btn-sm" type="button" style="" onclick="retreatStep()">Go Back</button></div>
+									<div class="center"><button class="btn btn-outline-secondary btn-round btn-sm previous" type="button" style="" onclick="retreatFormStep()">Go Back</button></div>
 									<hr>
 									<div class="form-group">
 										<label for="required" class="required float-right" style="padding-right: 5%;">* Required Fields</label>
@@ -326,7 +326,7 @@
 											<div class="invalid-feedback text-center" aria-live="polite">
 												Some elements in your submission were missing. Please go back and ensure you have filled out all requirements.
 											</div>
-											<button class="btn btn-primary btn-round mx-auto submit-button" type="button" onclick="sendForm()">Submit</button>
+											<button class="btn btn-primary btn-round mx-auto submit-button" type="button" onclick="checkSend()">Submit</button>
 										</div>
 										<div class="clearfix"></div>
 									</div>	
