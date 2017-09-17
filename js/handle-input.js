@@ -6,18 +6,18 @@
 	[].forEach.call(els, function (el) {
 		el.addEventListener("input", function (event) {
 			if (el.validity.valid) {
-				submitButton.classList.remove("disabled")
-				submitButton.classList.remove("shake")
-				$(submitButton).prev().hide()
-				el.classList.remove("error")
-				$(el).nextAll().eq(1).hide()
+				submitButton.classList.remove("disabled");
+				submitButton.classList.remove("shake");
+				$(submitButton).prev().hide();
+				el.classList.remove("error");
+				$(el).nextAll().eq(1).hide();
 			}
 			if (!el.validity.valid) {
-				submitButton.classList.add("disabled")
-				submitButton.classList.add("shake")
-				$(submitButton).prev().show()
-				el.classList.add("error")
-				$(el).nextAll().eq(1).show()
+				submitButton.classList.add("disabled");
+				submitButton.classList.add("shake");
+				$(submitButton).prev().show();
+				el.classList.add("error");
+				$(el).nextAll().eq(1).show();
 			}
 		})
 	});
@@ -35,6 +35,7 @@ function sendForm() {
 	}
 	
 	if (form.checkValidity() == true) {
+		$('#thanks-modal').modal('show');
 		handleSend();
 	}
 }
@@ -187,6 +188,17 @@ function handleSend() {
 
 	var contents = 'Name: ' + fullName + '\n' + 'Address 1: ' + address + '\n' + 'Address 2: ' + addressTwo + '\n' + 'City: ' + city + '\n' + 'State: ' + state + '\n' + 'Zip: ' + zip + '\n' + 'Phone Number: ' + phoneNumber + '\n' + 'Phone Type: ' + phoneType + '\n' + 'Email: ' + email + '\n' + 'Loan Amount Requested: ' + loanAmount + '\n' + 'Best Time to Contact: ' + time + '\n' + 'How did you hear about us?: ' + reason + '\n' + 'Additional Customer Comments: ' + comments;
 
-	$.post('https://dry-retreat-60525.herokuapp.com', { from: from, to: to, contents: contents });
+	$.post('https://dry-retreat-60525.herokuapp.com', { from: from, to: to, contents: contents })
+		.done(function() {
+			$('.modal-body').html("Success! Your results were successfully sent to your selected branch.")
+		})
+		.fail(function() {
+			$('.modal-body').html("Sending your results failed. Try hitting the submit button again.");
+		})
+		.always(function() {
+			setTimeout(function() {
+				$('#thanks-modal').hide();
+				}, 2000);	
+		});
 	
 }
