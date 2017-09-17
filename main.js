@@ -99,6 +99,7 @@ function handleZipResp(data) {
   } else {
     var queryZip = {};
     var zipList = data.zip_codes;
+    console.log(data.zip_codes);
     var output = ''; // 
     
     zipList.forEach(function(zipcode) {
