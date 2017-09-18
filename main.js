@@ -156,9 +156,9 @@ function searchForZip() {
       xhr.onload = function() {
         if (xhr.status === 200) {
           console.log(xhr.responseText);
-          // var data = JSON.parse(xhr.responseText);
-          // cache[cacheKey] = data;
-          // handleZipResp(data);
+          /* var data = JSON.parse(xhr.responseText);
+          cache[cacheKey] = data;
+          handleZipResp(data); */
         } else {
           console.log(xhr.status);
           cache[cacheKey] = json;
