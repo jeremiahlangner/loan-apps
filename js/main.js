@@ -99,6 +99,7 @@ function handleZipResp(data) {
   } else {
     var queryZip = {};
     var zipList = data.zip_codes;
+    console.log(data.zip_codes);
     var output = ''; // 
     
     zipList.forEach(function(zipcode) {
@@ -109,7 +110,7 @@ function handleZipResp(data) {
 
     // sort the zipcode list from closest to furthest
     zipList.sort(function(a, b) {
-        return parseFloat(a.distance) - parseFloat(b.distance);
+      return parseFloat(a.distance) - parseFloat(b.distance);
     });
 
     // Build html for list.
@@ -154,9 +155,11 @@ function searchForZip() {
       xhr.open('GET', url);
       xhr.onload = function() {
         if (xhr.status === 200) {
-          var data = xhr.responseText;
+          console.log(xhr.responseText);
+          console.log(JSON.parse(xhr.responseText));
+          /* var data = JSON.parse(xhr.responseText);
           cache[cacheKey] = data;
-          handleZipResp(data);
+          handleZipResp(data); */
         } else {
           console.log(xhr.status);
           cache[cacheKey] = json;
