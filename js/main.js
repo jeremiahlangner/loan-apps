@@ -124,7 +124,7 @@ function handleZipResp(data) {
           '</li><li>Distance: ';
         
         if (zipcode.distance == '0') {
-          output = output + '<' + math.round(zipList[1].distance) + ' mi.</li></ul>';
+          output = output + '<' + Math.round(zipList[1].distance) + ' mi.</li></ul>';
         } else {
           output = output + '~' + zipcode.distance.toFixed(1) + ' mi.</li></ul>';
         }   
@@ -155,8 +155,6 @@ function searchForZip() {
       xhr.open('GET', url);
       xhr.onload = function() {
         if (xhr.status === 200) {
-          console.log(xhr.responseText);
-          console.log(JSON.parse(xhr.responseText));
           var data = JSON.parse(xhr.responseText);
           cache[cacheKey] = data;
           handleZipResp(data);
@@ -166,32 +164,6 @@ function searchForZip() {
         }
       };
       xhr.send();
-
-      // Request from API
-//          $.ajax({
-//              "url": url,
-//              "dataType": "json"
-//          }).done(function(data) {
-//              handleZipResp(data);
-                
-//              // Store in cache
-//              cache[cacheKey] = data;
-
-//          }).fail(function(data) {
-//              if (data.responseText && (json = $.parseJSON(data.responseText)))
-//              {
-//                  // Store in cache
-//                  cache[cacheKey] = json;
-                    
-//                  // Check for error
-//                  if (json.error_msg) {
-//                      console.log(json.error_msg);
-//                  }
-//              }
-//              else {
-//                  console.log('Request failed.');
-//              }
-//          });
     }
   }
 }
