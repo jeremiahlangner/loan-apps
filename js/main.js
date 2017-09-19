@@ -1,4 +1,5 @@
-(function app() { 
+(function() { 
+
   /* Some shorthand.*/
   function value(el) {
       return document.querySelector(el).value || '';
@@ -35,8 +36,8 @@
   function handleEvents() {
     var buttons = document.getElementsByTagName("BUTTON");
     [].forEach.call(buttons, function(button) {
-      var action = app[button.getAttribute('data-action')]();
-      button.addEventListener("click", action);
+      var action = button.getAttribute('data-action');
+      button.addEventListener("click", app[action]);
     });
   }
 
@@ -219,7 +220,14 @@
     }
   }
 
+  // namespace variable
+  var app = {
+    searchForZip: searchForZip,
+    advanceFormStep: advanceFormStep,
+    retreatFormStep: retreatFormStep,
+    checkSend: checkSend
+  };
+
   handleEvents();
   validateInput();
-
 })();
