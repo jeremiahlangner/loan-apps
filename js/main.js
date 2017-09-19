@@ -5,12 +5,12 @@
       return document.querySelector(el).value || '';
   }
 
-  function is_all_ws( nod )
+  function is_all_ws(nod)
   {
     return !(/[^\t\n\r ]/.test(nod.textContent));
   }
 
-  function is_ignorable( nod ) {
+  function is_ignorable(nod) {
     return ( nod.nodeType == 8) || // A comment node
            ( (nod.nodeType == 3) && is_all_ws(nod) ); // a text node, all ws
   }
@@ -31,6 +31,20 @@
       }
     }
     return null;
+  }
+
+  function show(el, delay) {
+    el.classList.add("show");
+    setTimeout(function() {
+      el.style.visibility = "visible";
+    }, delay);
+  }
+
+  function hide(el, delay) {
+    el.style.visibility = "hidden";
+    setTimeout(function() {
+      el.classList.remove("show");
+    }, delay);
   }
 
   function handleEvents() {
@@ -68,9 +82,8 @@
 
     while(finding) {
       if(currentStep.classList.contains("show")) {
-        currentStep.classList.toggle("show");
-        currentStep.nextElementSibling.classList.toggle("show");
-        // currentStep.nextElementSibling.style.display = "inline";
+        hide(currentStep, 0);
+        show(currentStep.nextElementSibling, 0);
         break;    
       } else {
         currentStep = currentStep.nextElementSibling;
@@ -84,14 +97,17 @@
 
     while(finding) {
       if(currentStep.classList.contains("show")) {
-        currentStep.classList.toggle("show");
-        previousElementSibling(currentStep).classList.toggle("show");
-        //previousElementSibling(currentStep).style.display = "inline";
+        hide(currentStep, 0);
+        show(previousElementSibling(currentStep), 0);
         break;  
       } else {
         currentStep = currentStep.nextElementSibling;
       }
     }
+  }
+
+  function handleZipSelection() {
+
   }
 
   function handleZipResp(data) {
@@ -117,16 +133,23 @@
       // Build html for list.
       zipList.slice(0, 6).forEach(function(zipcode) {
 
+        // <div class="form-check">
+        //   <label class="form-check-label">
+        //     <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+        //     Option one is this and that&mdash;be sure to include why it's great
+        //   </label>
+        // </div>
+        
         if(zipcode.state == queryZip.state) {
           output = output + 
-            '<ul style="list-style-type:none; padding-left: 0;"><li>' + 
-            zipcode.city + ', ' + zipcode.state + 
-            '</li><li>Zipcode: ' + zipcode.zip_code + 
-            '</li><li>Distance: ';
+            '<div class="form-check"><label class="form-check-label">' + 
+            '<input class="form-check-input" type="radio" name="locationSelection" id="location-' + zipcode + ' value="option1">' + 
+            zipcode.city + ', ' + zipcode.state + ' ' + zipcode.zip_code + '\n' +
+            'Distance: ';
           if (zipcode.distance == '0') {
-            output = output + '<' + Math.round(zipList[1].distance) + ' mi.</li></ul>';
+            output = output + '<' + Math.round(zipList[1].distance) + ' mi.</label></div>';
           } else {
-            output = output + '~' + zipcode.distance.toFixed(1) + ' mi.</li></ul>';
+            output = output + '~' + zipcode.distance.toFixed(1) + ' mi.</label></div>';
           }   
         }
       });
@@ -169,7 +192,6 @@
   function requestPost(url, data) {
     var xhr = new XMLHttpRequest();
     xhr.open("POST", url);
-    console.log(xhr.getResponseHeader());
     xhr.onload = function() {
       if (xhr.status === 200) {
         console.log("Successfully sent post request.")
@@ -183,7 +205,12 @@
   }
 
   function handleSend() {
-    var to = 'jeremiah@jeremiahlangner.com';
+    /* grab to email from url for now. */
+    var searchParams = new URLSearchParams(window.location.search);
+    var to = searchParams.get("e");
+    console.log(to);
+    
+    /* from address will be a 'no-reply' address from hosting server. */
     var from = 'fifthofeight@yahoo.com';
 
     var contents = 'Name: ' + value('#full-name') + '\n' + 

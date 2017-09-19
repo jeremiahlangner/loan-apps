@@ -14,7 +14,7 @@ $primary: rgba(114, 137, 218, 1.0);
 
 /* background gradient */
 
-input, textarea, button, label, option, select, .button, .hndle {
+input, textarea, button, label, option, select, .button, .hndle, {
 	transition: all .25s cubic-bezier(0.64,0.20,0.02,0.35);
 }
 
