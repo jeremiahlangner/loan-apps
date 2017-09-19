@@ -168,7 +168,8 @@
 
   function requestPost(url, data) {
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', url);
+    xhr.open("POST", url);
+    console.log(xhr.getResponseHeader());
     xhr.onload = function() {
       if (xhr.status === 200) {
         console.log("Successfully sent post request.")
