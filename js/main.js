@@ -99,8 +99,7 @@
     } else {
       var queryZip = {};
       var zipList = data.zip_codes;
-      console.log(data.zip_codes);
-      var output = ''; // 
+      var output = '';
       
       zipList.forEach(function(zipcode) {
         if(zipcode.distance == '0') {
@@ -131,6 +130,8 @@
         
         }
       });
+
+      console.log(output);
       
       // Output the list to the page.
       document.querySelector('.location-header').display = "block";
