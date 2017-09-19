@@ -168,8 +168,7 @@
 
   function requestPost(url, data) {
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', url);
-    xhr.setRequestHeader( 'Access-Control-Allow-Origin', '*');
+    xhr.open('POST', url, true);
     xhr.onload = function() {
       if (xhr.status === 200) {
         console.log("Successfully sent post request.")
