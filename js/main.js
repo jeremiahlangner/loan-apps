@@ -144,7 +144,7 @@
           output = output + 
             '<div class="form-check"><label class="form-check-label">' + 
             '<input class="form-check-input" type="radio" name="locationSelection" id="location-' + zipcode + ' value="option1">' + 
-            zipcode.city + ', ' + zipcode.state + ' ' + zipcode.zip_code + '\n' +
+            zipcode.city + ', ' + zipcode.state + ' ' + zipcode.zip_code + '<br />' +
             'Distance: ';
           if (zipcode.distance == '0') {
             output = output + '<' + Math.round(zipList[1].distance) + ' mi.</label></div>';
