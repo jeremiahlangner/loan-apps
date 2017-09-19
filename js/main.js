@@ -132,10 +132,8 @@
       });
 
       console.log(output);
-      
-      // Output the list to the page.
       document.querySelector('.location-header').display = "block";
-      document.querySelector('#zipcode-info').innerhtml = output;
+      document.querySelector('#zipcode-info').innerHTML = output;
     }
   }
 
