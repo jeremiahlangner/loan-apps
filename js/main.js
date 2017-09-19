@@ -132,18 +132,13 @@
 
       // Build html for list.
       zipList.slice(0, 6).forEach(function(zipcode) {
-
-        // <div class="form-check">
-        //   <label class="form-check-label">
-        //     <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-        //     Option one is this and that&mdash;be sure to include why it's great
-        //   </label>
-        // </div>
         
         if(zipcode.state == queryZip.state) {
           output = output + 
             '<div class="form-check"><label class="form-check-label">' + 
             '<input class="form-check-input" type="radio" name="locationSelection" id="location-' + zipcode.zip_code + ' value="option1">' + 
+            '<strong>Branch Name For Location at ' + zipcode.zip_code = '</strong><br />' +
+            'Address of Location<br />' +
             zipcode.city + ', ' + zipcode.state + ' ' + zipcode.zip_code + '<br />' +
             'Distance: ';
           if (zipcode.distance == '0') {
