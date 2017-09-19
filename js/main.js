@@ -137,7 +137,7 @@
           output = output + 
             '<div class="form-check"><label class="form-check-label">' + 
             '<input class="form-check-input" type="radio" name="locationSelection" id="location-' + zipcode.zip_code + ' value="option1">' + 
-            '<strong>Branch Name For Location at ' + zipcode.zip_code = '</strong><br />' +
+            '<strong>Branch Name For Location at ' + zipcode.zip_code + '</strong><br />' +
             'Address of Location<br />' +
             zipcode.city + ', ' + zipcode.state + ' ' + zipcode.zip_code + '<br />' +
             'Distance: ';
