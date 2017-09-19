@@ -132,7 +132,7 @@
       });
 
       console.log(output);
-      document.querySelector('.location-header').display = "block";
+      document.querySelector('.location-header').style.display = "block";
       document.querySelector('#zipcode-info').innerHTML = output;
     }
   }
