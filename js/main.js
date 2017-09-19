@@ -131,9 +131,8 @@
         }
       });
 
-      console.log(output);
-      document.querySelector('.location-header').style.display = "block";
       document.querySelector('#zipcode-info').innerHTML = output;
+      document.querySelector('.location-header').style.display = "block";
     }
   }
 
@@ -170,6 +169,7 @@
   function requestPost(url, data) {
     var xhr = new XMLHttpRequest();
     xhr.open('POST', url);
+    xhr.setRequestHeader( 'Access-Control-Allow-Origin', '*');
     xhr.onload = function() {
       if (xhr.status === 200) {
         console.log("Successfully sent post request.")
