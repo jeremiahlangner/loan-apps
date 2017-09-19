@@ -143,7 +143,7 @@
         if(zipcode.state == queryZip.state) {
           output = output + 
             '<div class="form-check"><label class="form-check-label">' + 
-            '<input class="form-check-input" type="radio" name="locationSelection" id="location-' + zipcode + ' value="option1">' + 
+            '<input class="form-check-input" type="radio" name="locationSelection" id="location-' + zipcode.zip_code + ' value="option1">' + 
             zipcode.city + ', ' + zipcode.state + ' ' + zipcode.zip_code + '<br />' +
             'Distance: ';
           if (zipcode.distance == '0') {
