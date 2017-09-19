@@ -67,9 +67,10 @@
     var finding = true;
 
     while(finding) {
-      if(currentStep.style.display !== "none") {
-        currentStep.style.display = "none";
-        currentStep.nextElementSibling.style.display = "inline";
+      if(currentStep.classList.contains("show")) {
+        currentStep.classList.toggle("show");
+        currentStep.nextElementSibling.classList.toggle("show");
+        // currentStep.nextElementSibling.style.display = "inline";
         break;    
       } else {
         currentStep = currentStep.nextElementSibling;
@@ -82,9 +83,10 @@
     var finding = true;
 
     while(finding) {
-      if(currentStep.style.display !== "none") {
-        currentStep.style.display = "none";
-        previousElementSibling(currentStep).style.display = "inline";
+      if(currentStep.classList.contains("show")) {
+        currentStep.classList.toggle("show");
+        previousElementSibling(currentStep).classList.toggle("show");
+        //previousElementSibling(currentStep).style.display = "inline";
         break;  
       } else {
         currentStep = currentStep.nextElementSibling;
@@ -121,13 +123,11 @@
             zipcode.city + ', ' + zipcode.state + 
             '</li><li>Zipcode: ' + zipcode.zip_code + 
             '</li><li>Distance: ';
-          
           if (zipcode.distance == '0') {
             output = output + '<' + Math.round(zipList[1].distance) + ' mi.</li></ul>';
           } else {
             output = output + '~' + zipcode.distance.toFixed(1) + ' mi.</li></ul>';
           }   
-        
         }
       });
 
@@ -178,7 +178,8 @@
         console.log(xhr.status);
       }
     }
-    xhr.send(JSON.stringify(data));
+    data = JSON.stringify(data);
+    xhr.send(data);
   }
 
   function handleSend() {

@@ -135,6 +135,9 @@ textarea {
 		opacity: 0.9;
 		background-color: $primary;
 	}
+	&:active {
+		background-color: darken($primary, 20%);
+	}
 }
 
 .disabled {
@@ -150,6 +153,9 @@ textarea {
 		background-color: transparent;
 		color: $primary;
 	}
+	&:active {
+		background-color: lighten($primary, 20%);
+	}
 }
 
 .btn.btn-primary-outline {
@@ -158,6 +164,9 @@ textarea {
 	&:hover {
 		color: white;
 		background: $primary;
+	}
+	&:active {
+		background-color: darken($primary, 20%);
 	}
 }
 
@@ -187,8 +196,12 @@ textarea {
 	padding: 8px;
 }
 
-.hidden-on-start {
+.hidden {
 	display: none;
+}
+
+.show {
+	display: inline;
 }
 
 .margin-correct {

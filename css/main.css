@@ -108,6 +108,8 @@ textarea {
   .btn:hover {
     opacity: 0.9;
     background-color: #7289da; }
+  .btn:active {
+    background-color: #304eb6; }
 
 .disabled {
   border-color: #AAAAAA !important;
@@ -120,6 +122,8 @@ textarea {
   .btn-primary:hover {
     background-color: transparent;
     color: #7289da; }
+  .btn-primary:active {
+    background-color: #c3cdef; }
 
 .btn.btn-primary-outline {
   border-color: #7289da;
@@ -127,6 +131,8 @@ textarea {
   .btn.btn-primary-outline:hover {
     color: white;
     background: #7289da; }
+  .btn.btn-primary-outline:active {
+    background-color: #304eb6; }
 
 .btn-sm {
   margin-top: 0 !important;
@@ -146,8 +152,11 @@ textarea {
   border-radius: 5px;
   padding: 8px; }
 
-.hidden-on-start {
+.hidden {
   display: none; }
+
+.show {
+  display: inline; }
 
 .margin-correct {
   margin-top: 8px !important; }
