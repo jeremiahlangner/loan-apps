@@ -2,20 +2,21 @@
 
 
 /* colors */
-$primary: rgba(114, 137, 218, 1.0);
-// $primary: #ef5350;
-// $primary: #3D5AFE;
-// $primary: #F06292;
-// $primary: #5C6BC0;
-// $primary: #78909C;
-// $primary: #;
-// $primary: #;
-// $primary: #;
+/* $primary: rgba(114, 137, 218, 1.0);*/
+$primary: #ef5350;
+/* $primary: #3D5AFE; */
+/* $primary: #F06292; */
+/* $primary: #5C6BC0;*/
+/* $primary: #78909C;*/
+/* $primary: #;*/
+/* $primary: #;*/
+/* $primary: #;*/
 
 /* background gradient */
 
-input, textarea, button, label, option, select, .button, .hndle, {
-	transition: all .25s cubic-bezier(0.64,0.20,0.02,0.35);
+input, textarea, button, label, option, select, .button, .hndle, .form-step {
+	-webkit-transition: .25s cubic-bezier(0.64,0.20,0.02,0.35);
+	transition: .25s cubic-bezier(0.64,0.20,0.02,0.35);
 }
 
 html {
@@ -25,7 +26,7 @@ html {
 }
 
 hr {
-	// border-color: $primary;
+	/* border-color: $primary;*/
 }
 
 ul {
@@ -42,7 +43,8 @@ body {
    	background-color: lighten($primary, 30%);
    	background-image: linear-gradient(-5deg, lighten($primary, 25%), lighten($primary, 30%));
    	background-repeat: no-repeat;
-   	box-shadow: inset 0 0 500px rgba(255,255,255,0.1);
+   	-webkit-box-shadow: inset 0 0 500px rgba(255,255,255,0.1);
+   	        box-shadow: inset 0 0 500px rgba(255,255,255,0.1);
    	-webkit-font-smoothing: antialiased;
    	-moz-osx-font-smoothing: grayscale;
 }
@@ -52,7 +54,8 @@ body {
 	margin-bottom: 32px;
 	border-radius: 2px;
 	padding: 24px;
-	box-shadow: 0 0 40px rgba(0,0,0,0.05);
+	-webkit-box-shadow: 0 0 40px rgba(0,0,0,0.05);
+	        box-shadow: 0 0 40px rgba(0,0,0,0.05);
 	background-color: #fbfbfb;
 }
 
@@ -87,10 +90,20 @@ input {
 	&:hover {
 		border-color: #999;
 	}
+	&:hover::-webkit-input-placeholder {
+	}
+	&:hover:-ms-input-placeholder {
+	}
 	&:hover::placeholder {
 	}
 	&:focus {
 		border-color: $primary !important;
+	}
+	&:focus::-webkit-input-placeholder {
+		color: $primary;
+	}
+	&:focus:-ms-input-placeholder {
+		color: $primary;
 	}
 	&:focus::placeholder {
 		color: $primary;
@@ -183,7 +196,7 @@ textarea {
 }
 
 .card-header {
-	// background-color: lighten($primary, 10%);
+	/* background-color: lighten($primary, 10%);*/
 	background: transparent;
 }
 
@@ -201,7 +214,7 @@ textarea {
 }
 
 .show {
-	display: inline;
+	display: block;
 }
 
 .margin-correct {

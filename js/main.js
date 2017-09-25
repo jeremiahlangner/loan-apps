@@ -35,15 +35,14 @@
 
   function show(el, delay) {
     el.classList.add("show");
+    handleEvents();
     setTimeout(function() {
-      el.style.visibility = "visible";
     }, delay);
   }
 
   function hide(el, delay) {
-    el.style.visibility = "hidden";
+    el.classList.remove("show");
     setTimeout(function() {
-      el.classList.remove("show");
     }, delay);
   }
 

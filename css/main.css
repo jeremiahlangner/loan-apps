@@ -1,13 +1,25 @@
 /* main.scss */
 /* colors */
+/* $primary: rgba(114, 137, 218, 1.0);*/
+/* $primary: #3D5AFE; */
+/* $primary: #F06292; */
+/* $primary: #5C6BC0;*/
+/* $primary: #78909C;*/
+/* $primary: #;*/
+/* $primary: #;*/
+/* $primary: #;*/
 /* background gradient */
-input, textarea, button, label, option, select, .button, .hndle {
-  transition: all 0.25s cubic-bezier(0.64, 0.2, 0.02, 0.35); }
+input, textarea, button, label, option, select, .button, .hndle, .form-step {
+  -webkit-transition: 0.25s cubic-bezier(0.64, 0.2, 0.02, 0.35);
+  transition: 0.25s cubic-bezier(0.64, 0.2, 0.02, 0.35); }
 
 html {
   position: absolute;
   height: 100%;
   width: 100%; }
+
+hr {
+  /* border-color: $primary;*/ }
 
 ul {
   display: inline-block;
@@ -19,9 +31,10 @@ body {
   width: 100%;
   font-family: 'Montserrat', Helvetica, Arial, sans-serif;
   font-size: 14px;
-  background-color: #ebeefa;
-  background-image: linear-gradient(-5deg, #d7def5, #ebeefa);
+  background-color: #fcdddc;
+  background-image: linear-gradient(-5deg, #fac6c5, #fcdddc);
   background-repeat: no-repeat;
+  -webkit-box-shadow: inset 0 0 500px rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 0 500px rgba(255, 255, 255, 0.1);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
@@ -31,6 +44,7 @@ body {
   margin-bottom: 32px;
   border-radius: 2px;
   padding: 24px;
+  -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.05);
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.05);
   background-color: #fbfbfb; }
 
@@ -41,22 +55,22 @@ body {
   margin-right: auto; }
 
 h1 {
-  color: #7289da; }
+  color: #ef5350; }
 
 h2 {
-  color: #7289da; }
+  color: #ef5350; }
 
 h3 {
-  color: #7289da; }
+  color: #ef5350; }
 
 h4 {
-  color: #7289da; }
+  color: #ef5350; }
 
 h5 {
-  color: #7289da; }
+  color: #ef5350; }
 
 h6 {
-  color: #7289da; }
+  color: #ef5350; }
 
 label {
   font-size: 12px;
@@ -74,9 +88,13 @@ input {
   input:hover {
     border-color: #999; }
   input:focus {
-    border-color: #7289da !important; }
+    border-color: #ef5350 !important; }
+  input:focus::-webkit-input-placeholder {
+    color: #ef5350; }
+  input:focus:-ms-input-placeholder {
+    color: #ef5350; }
   input:focus::placeholder {
-    color: #7289da; }
+    color: #ef5350; }
 
 strong {
   opacity: 0.7; }
@@ -88,7 +106,7 @@ select {
   select:hover {
     border-color: #999; }
   select:focus {
-    border-color: #7289da !important; }
+    border-color: #ef5350 !important; }
 
 textarea {
   width: 95% !important;
@@ -96,20 +114,20 @@ textarea {
   textarea:hover {
     border-color: #999; }
   textarea:focus {
-    border-color: #7289da !important; }
+    border-color: #ef5350 !important; }
 
 .btn {
   margin-top: 16px;
   margin-bottom: 16px;
   padding-left: 15%;
   padding-right: 15%;
-  border-color: #7289da !important;
-  color: #7289da; }
+  border-color: #ef5350 !important;
+  color: #ef5350; }
   .btn:hover {
     opacity: 0.9;
-    background-color: #7289da; }
+    background-color: #ef5350; }
   .btn:active {
-    background-color: #304eb6; }
+    background-color: #c71612; }
 
 .disabled {
   border-color: #AAAAAA !important;
@@ -117,22 +135,22 @@ textarea {
   color: #AAAAAA !important; }
 
 .btn-primary {
-  background: #7289da;
+  background: #ef5350;
   color: white; }
   .btn-primary:hover {
     background-color: transparent;
-    color: #7289da; }
+    color: #ef5350; }
   .btn-primary:active {
-    background-color: #c3cdef; }
+    background-color: #f8afad; }
 
 .btn.btn-primary-outline {
-  border-color: #7289da;
-  color: #7289da; }
+  border-color: #ef5350;
+  color: #ef5350; }
   .btn.btn-primary-outline:hover {
     color: white;
-    background: #7289da; }
+    background: #ef5350; }
   .btn.btn-primary-outline:active {
-    background-color: #304eb6; }
+    background-color: #c71612; }
 
 .btn-sm {
   margin-top: 0 !important;
@@ -145,10 +163,11 @@ textarea {
   margin-top: 40px; }
 
 .card-header {
+  /* background-color: lighten($primary, 10%);*/
   background: transparent; }
 
 .outline {
-  border: 1px solid #7289da;
+  border: 1px solid #ef5350;
   border-radius: 5px;
   padding: 8px; }
 
@@ -156,7 +175,7 @@ textarea {
   display: none; }
 
 .show {
-  display: inline; }
+  display: block; }
 
 .margin-correct {
   margin-top: 8px !important; }
