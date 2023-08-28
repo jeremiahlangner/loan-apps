@@ -1,0 +1,48 @@
+/* main.scss */
+/* variables */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px; }
+
+.sub-container {
+  margin-top: 32px;
+  margin-bottom: 32px;
+  border-radius: 5px;
+  border: 1px solid #eee;
+  border-left: 4px solid #428bca;
+  padding: 24px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1); }
+
+input {
+  padding: 6px 8px !important;
+  display: inline !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  width: 95% !important; }
+
+select {
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
+  font-size: 12px !important;
+  font-weight: 500 !important; }
+
+textarea {
+  width: 95% !important;
+  font-size: 12px !important;
+  font-weight: 500 !important; }
+
+.btn {
+  border-radius: 2px !important; }
+
+form .row {
+  margin-top: 5px; }
+
+.required {
+  color: red;
+  display: inline; }
+
+.btn-round {
+  border-radius: 100px !important; }
+
+/*# sourceMappingURL=main.css.map */
